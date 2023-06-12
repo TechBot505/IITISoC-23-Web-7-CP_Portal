@@ -1,0 +1,41 @@
+
+   
+  
+ .btn {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  
+   
+  }
+  button {
+     background-color: navy;
+     color:white;
+     padding:15px;
+     border-radius:12px;
+     border-color: white;
+
+  }
+ 
+    body {
+      background-image: url('../bluebg.jpg');
+      background-size: cover; /* Adjust to your preference */
+      background-position: center center; /* Adjust to your preference */
+      background-repeat: no-repeat;
+    }
+  .nav {
+    padding-top: 30px;
+    
+  }img{
+    width: 400px;
+    
+    border-color: white;
+    border-radius: 15px;
+    
+  }
+  .logo {
+     padding-left:50px;
+     padding-top:30px;
+  }
