@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../Music/cp-portal/models"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Mongoose_With_Express_CODE (1)"
+	}
+}
