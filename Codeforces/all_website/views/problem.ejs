@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="../st2.css" rel="stylesheet">
+  <style>
+  .select{
+    display: inline-block;
+    width: 140px;
+    height:45px;
+
+    padding: 8px 12px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    
+    border-radius: 15px;
+
+   
+  }
+
+  body{
+    background-color: rgb(22, 23, 35);
+}
+  .s button {
+    background-color: white;
+   border-color: white;
+   border-radius: 15px;
+
+  }
+  .s {
+    display: inline-block;
+    padding-left:90px;
+    
+    padding-top:30px;
+    border-radius: 15px;
+
+
+  }
+ 
+ .topics button {
+  display: block;
+  padding: 8px 20px;
+  width:200px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  background-color:navy;
+  color: #fff;
+  border-radius: 12px;
+  border-color: white;
+
+  transition: background-color 0.3s ease;
+}
+
+.topics {
+  
+  flex:1;
+}
+#yo {
+  margin-top:30px;
+  
+  margin-bottom: 30px;
+}
+.problems {
+  background-color: navy;
+}
+.container {
+  display:flex;
+}
+.problem{
+  
+  display: relative;
+  
+  
+}
+.status div{
+ background-color: navy;
+ color:white;
+ width: 300px;
+ height:50px;
+ 
+ border-color:white;
+ text-align:center;
+}
+.status {
+ padding-left: 30px;
+  padding-bottom: 30px;
+  display:flex;
+}
+.topic{
+  flex:1;
+}
+.problem{
+  flex:2;
+  background-color: navy;
+}
+.rating{
+  flex:0.5;
+  background-color: navy;
+}
+.to-do{
+  flex:0.25;
+  background-color: navy;
+}
+.fav{
+  flex:0.25;
+  background-color: navy;
+}
+.problem button {
+  align-items: flex-end;
+}
+#yup div {
+    height:500px;
+}
+#go {
+    padding-top: 30px;
+}
+.dropdown {
+    padding-left: 100px;
+}
+.btn-group {
+  margin-left: 50px;
+}
+.table {
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  
+}
+thead {
+  background-color: blue;
+}
+nav{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+</style>
+  </head>
+  <body>
+    <div class="flex">
+        <div class="s" >
+          <button>
+          <img  class="select" src="../Codeforces.png"/>
+      </button>
+        </div>
+        <div class="s">
+          <button>
+          <img class="select" src="../cc.jpg"/>
+      </button>
+        </div>
+        <div class="s">
+          <button>
+          <img class="select" src="../hack.png"/>
+      </button>
+        </div>
+        <div class="s">
+          <button>
+          <img class="select"src="../lc.jpeg"/>
+      </button>
+        </div>
+        <div class="s">
+          <button>
+          <img class="select"src="../he.jpeg"/>
+      </button>
+        </div>
+      </div>
+      <nav class="navbar bg-body-">
+        
+        <div class="container-fluid">
+          <a class="navbar-brand"></a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search PROBLEMS" aria-label="Search ">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      
+      
+      <!-- Large button groups (default and split) -->
+<div class="btn-group">
+  <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    DIFFICULTY LEVEL
+  </button>
+  <ul class="dropdown-menu">
+    <li> <a href="/problems?level=800">800-1000</a></li>
+    <li> <a href="/problems?level=1100">1100-1300</a></li>
+    <li> <a href="/problems?level=1400">1400-1600</a></li>
+    <li> <a href="/problems?level=1700">1700-1900</a></li>
+    <li> <a href="/problems?level=2000">2000-2200</a></li>
+    <li> <a href="/problems?level=2300">2300-2500</a></li>
+  </ul>
+</div>
+<div class="btn-group">
+  <button class="btn btn-success btn-lg" type="button">
+    TOPICS
+  </button>
+  <button type="button" class="btn btn-lg btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="problems?topics=math"    >   MATH      </a></li>
+    <li><a href="problems?topics=imple"   >   IMPLEMENTATION      </a></li>
+    <li><a href="problems?topics=binary"  >   BINARY SEARCH       </a></li>
+    <li><a href="problems?topics=str"     >   STRINGS             </a></li>
+    <li><a href="problems?topics=greedy"  >   GREEDY ALGORITHMS   </a></li>
+    <li><a href="problems?topics=dp"      >   DYNAMIC PROGRAMMING </a></li>
+    <li><a href="problems?topics=graph"   >   GRAPHS              </a></li>
+    <li><a href="problems?topics=sorting" >   SORTING             </a></li>
+    <li><a href="problems?topics=data"    >   DATA STRUCTURES     </a></li>
+    <li><a href="problems?topics=tree"    >   TREES               </a></li>
+  </ul>
+</div>
+<table class="table" data-bs-theme="dark">
+  <thead>
+    <tr>
+      <th scope="col">PROBLEMS</th>
+      <th scope="col">TOPICS</th>
+      <th scope="col">RATING</th>
+      <th scope="col">TO-DO</th>
+      <th scope="col">FAV</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% for(let problem of problems) { %>
+        <tr>
+            
+                <td><a href=<%=problem.link%>><%= problem.name %></a></td>  
+                <td><%= problem.topics %> </td>
+                <td><%= problem.level %> </td>
+                <td><input type="checkbox"/></td>
+                <td><input type="checkbox"/></td>
+                
+                
+  
+                </input></td>
+  
+                
+        </tr>
+        <% }%>
+      
+  
+  
+  </tbody>
+</table>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="../problem.js"></script>
+      </body>
+      </html>--
