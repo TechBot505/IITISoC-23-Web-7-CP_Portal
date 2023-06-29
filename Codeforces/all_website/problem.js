@@ -86,6 +86,9 @@ app.get('/problems', async(req,res)=>{
   if(level==2300){
     const problems=await Problem.find({level:{$lte:2500,$gte:2300}});
     res.render('problem.ejs',{problems,level});}
+  if(level==1){
+    const problems=await Problem.find({});
+    res.render('problem.ejs',{problems});}
   else{
       const problems=await Problem.find({});
       //console.log(problems);
@@ -96,10 +99,11 @@ app.get('/problems', async(req,res)=>{
   
 })
 
-
-//app.get("/main", function (req, res) {   
-//  res.render("main.ejs")}
-//    )
+app.post("/problems",async(req,res)=>{
+  var search=req.body.search;
+  const problems=await Problem.find({name:new RegExp(search, 'i')});
+  res.render('problem.ejs',{problems});
+})
 
 app.listen(3000,()=>{
     console.log("LISTENING ON PORT 3000");
