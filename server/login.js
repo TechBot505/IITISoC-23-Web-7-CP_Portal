@@ -1,6 +1,9 @@
 const express= require('express');
 const app=express();
 const path= require('path');
+const bcrypt= require('bcrypt');
+const session= require('express-session');
+
 
 const mongoose= require('mongoose');
 const User= require('./user');
@@ -15,37 +18,64 @@ app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 app.use(express.static('public'));
 
-app.use(express.urlencoded({extended :true}))
-app.post('/signup',function (req,res){
+app.use(express.urlencoded({extended :true}));
+const sessionOptions = {secret: 'thisisnotagoodsecret', resave: false, saveUninitialized: false}
+app.use(session(sessionOptions));
+app.get('/',(req,res) => {
+    res.render('homepage.ejs')
+   
+})
+app.get('/afterlog', (req,res)=> {
+    res.render('hlogout')
+})
 
-var email=req.body.email;
-var username= req.body.username;
-var pass= req.body.password;
-var data= {
-    "username": username,
-    "email":email,
-    "password":pass
+app.get('/signup', (req,res)=>{
+    res.render('signup')
+})
 
-}
-db.collection('details').insertOne(data, function(err, collection){
-    if (err) throw err;
-    console.log("Record inserted successfully");
-    console.log(data);
-});
-res.redirect('homepage')
+
+
+app.post('/signup',async (req,res) => {
+const {email, username, password}= req.body;
+const hash= await bcrypt.hash(password, 12);
+const user= new User({
+    email,
+    username,
+    password:hash
+})
+await user.save();
+res.redirect('/afterlog')
 })
 app.get('/login', (req,res) =>
 {
     res.render('login')
 })
-app.get('/signup', (req,res)=>{
-    res.render('signup')
+
+app.post('/login', async (req,res) => {
+    const {username, password}=req.body;
+  const user= await User.findOne({username});
+  const validPassword= await bcrypt.compare(password,user.password)
+  if (validPassword)
+  {
+    req.session.user_id= user._id;
+    res.redirect('/secret');
+  }
+  else{
+    res.redirect('/login')
+  }
+})
+app.post('/logout', (req,res) =>{
+    req.session.destroy();
+    res.redirect('/');
+})
+app.get('/secret', (req,res) => {
+    if (!req.session.user_id)
+    {
+        res.redirect('/')
+    }
+    res.render('hlogout')
 })
 
-app.get('/',(req,res) => {
-    res.render('homepage.ejs')
-   
-})
 
 
 app.listen(3000, () =>
