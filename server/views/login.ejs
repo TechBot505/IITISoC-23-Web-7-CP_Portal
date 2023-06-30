@@ -130,15 +130,15 @@
 </head>
 <body>
     <div class="box">
-        <form>
+        <form action="/login" method="POST" novalidate class="validated-form">
             <h2>Sign in</h2>
             <div class="inputBox">
-                <input type="text" required="required" >
+                <input type="text" name="username" id="username" required>
                 <span>Username</span>
                 <i></i>
             </div>
             <div class="inputBox">
-                <input type="password" required="required">
+                <input type="password" name="password" id="password" required>
                 <span>Password</span>
                 <i></i>
             </div>
@@ -150,5 +150,23 @@
 
         </form>
     </div>
+    <script>
+        (function (){
+            'use strict'
+            const forms= document.querySelectorAll('.validated-form')
+            Array.from(forms) 
+                .forEach(function (form){
+                    form.addEventListener('submit',function (event){
+                        if (!form.checkValidity())
+                        {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    },false)
+                })
+            
+        })()
+    </script>
 </body>
 </html>
