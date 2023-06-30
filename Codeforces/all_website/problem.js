@@ -12,6 +12,9 @@ mongoose.connect('mongodb://127.0.0.1:27017/Codeforces',{useNewUrlParser:true})
 
 const app=express();
 app.use(express.json())
+//app.use("/css",express.static(path.join(__dirname,"../node_modules/bootstrap/dist/css")))
+//app.use("/js",express.static(path.join(__dirname,"../node_modules/bootstrap/dist/js")))
+//app.use("/js",express.static(path.join(__dirname,"../node_modules/jquery/dist")))
 
 
 const Problem = require("./models/index.js");
@@ -19,9 +22,11 @@ const Problem = require("./models/index.js");
 //var database
 const path=require("path");
 app.use(bodyparser.urlencoded({ extended: true }));
-
+//app.use(express.static(path.join(__dirname,'all_website')))
 app.set("views",path.join(__dirname,'views'));
 app.set("view engine","ejs");
+app.use(express.static(__dirname + '/public'));
+app.use("/static", express.static(__dirname + 'public'));
 
 
 app.get('/problems', async(req,res)=>{
@@ -104,6 +109,18 @@ app.post("/problems",async(req,res)=>{
   const problems=await Problem.find({name:new RegExp(search, 'i')});
   res.render('problem.ejs',{problems});
 })
+//{ '$regex':/^search$/i}
+
+app.get("/main", function (req, res) {   
+  res.render("main.ejs")
+ 
+
+
+}
+    )
+app.get("/learn", function (req, res) {   
+  res.render("learn.ejs")}
+    )
 
 app.listen(3000,()=>{
     console.log("LISTENING ON PORT 3000");

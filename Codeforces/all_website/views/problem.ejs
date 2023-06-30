@@ -22,12 +22,15 @@
   }
 
   body{
-    background-color: rgb(22, 23, 35);
-}
+    
+    background: radial-gradient(rgb(3, 7, 146),rgb(22,23,35));
+  }
+  
   .s button {
     background-color: white;
    border-color: white;
    border-radius: 15px;
+   
 
   }
   .s {
@@ -143,36 +146,55 @@ nav{
     <div class="flex">
         <div class="s" >
           <button>
-          <img  class="select" src="../Codeforces.png"/>
+          <img  class="select" src="/images/Codeforces.png"/>
+  
       </button>
         </div>
         <div class="s">
           <button>
-          <img class="select" src="../cc.jpg"/>
+          <img class="select" src="/images/cc.jpg"/>
       </button>
         </div>
         <div class="s">
           <button>
-          <img class="select" src="../hack.png"/>
+          <img class="select" src="/images/hack.png"/>
       </button>
         </div>
         <div class="s">
           <button>
-          <img class="select"src="../lc.jpeg"/>
+          <img class="select"src="/images/lc.jpeg"/>
       </button>
         </div>
         <div class="s">
           <button>
-          <img class="select"src="../he.jpeg"/>
+          <img class="select"src="/images/he.jpeg"/>
       </button>
         </div>
       </div>
+      
+
+
+      <nav class="navbar bg-body-">
+        
+        <div class="container-fluid">
+          <a class="navbar-brand"></a>
+            <button class="btn btn-outline-success" id="myButton" class="float-left submit-button" >Back</button>
+
+              <script type="text/javascript">
+                  document.getElementById("myButton").onclick = function () {
+                      location.href = "/main";
+                  };
+              </script>
+          
+        </div>
+      </nav>
+
       <nav class="navbar bg-body-">
         
         <div class="container-fluid">
           <a class="navbar-brand"></a>
           <form class="d-flex" role="search" method="post">
-            <input class="form-control me-2" type="text" name='search' placeholder="Search PROBLEMS" aria-label="Search ">
+            <input class="form-control me-2"  type="text" name="search" placeholder="Search PROBLEMS" aria-label="Search ">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
