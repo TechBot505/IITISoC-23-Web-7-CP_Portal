@@ -63,10 +63,10 @@
 .container {
   display:flex;
 }
-.problems{
+.problem{
   
   display: relative;
-  padding-top: 30px;
+  
   flex:2;
 }
 .status div{
