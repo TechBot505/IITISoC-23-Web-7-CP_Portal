@@ -1,29 +1,32 @@
 
-   
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
   
  .btn {
     display: inline-block;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  
+    padding-right: px;
+    padding-left: px;
+    padding-top: px;
+    padding-bottom: px;
+  border-color: aliceblue;
    
   }
   button {
-     background-color: navy;
+     background-color:#00003f;
      color:white;
      padding:15px;
-     border-radius:12px;
+     border-radius:10px;
      border-color: white;
 
   }
  
     body {
       background-image: url("../bluebg.jpg");
-      background-size: cover; /* Adjust to your preference */
-      background-position: center center; /* Adjust to your preference */
-      background-repeat: no-repeat;
+      background-size: 100% 100%;/* Adjust to your preference */
+      background-position: center ; /* Adjust to your preference */
+      background-repeat:repeat;
+      
     }
   .nav {
     padding-top: 30px;
