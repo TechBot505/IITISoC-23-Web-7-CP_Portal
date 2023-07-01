@@ -6,7 +6,7 @@ const session= require('express-session');
 
 
 const mongoose= require('mongoose');
-const User= require('./user');
+const User= require('./models/user');
 mongoose.connect('mongodb://127.0.0.1:27017/user');
 
 const db=mongoose.connection;
@@ -21,6 +21,8 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended :true}));
 const sessionOptions = {secret: 'thisisnotagoodsecret', resave: false, saveUninitialized: false}
 app.use(session(sessionOptions));
+app.use(require("./routes/index"))
+app.use(require("./routes/todo"))
 app.get('/',(req,res) => {
     res.render('homepage.ejs')
    
