@@ -1,0 +1,359 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="./st2.css" rel="stylesheet">
+  <style>
+    .select{
+    display: inline-block;
+    width: 140px;
+    height:45px;
+
+    padding: 8px 12px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    
+    border-radius: 15px;
+
+   
+  }
+
+  body{
+    background: radial-gradient(rgb(3, 7, 146),rgb(22,23,35));
+}
+  .s button {
+    background-color: white;
+   border-color: white;
+   border-radius: 15px;
+
+  }
+  .s {
+    display: inline-block;
+    padding-left:90px;
+    
+    padding-top:30px;
+    border-radius: 15px;
+
+
+  }
+ .to{
+  color:blue;
+  padding-left: 100px;
+  font-weight: bolder;
+  font-size: xx-large;
+  font-family:Georgia, 'Times New Roman', Times, serif
+ }
+ .topics button {
+  display: block;
+  padding: 8px 20px;
+  width:200px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  background-color:navy;
+  color: #fff;
+  border-radius: 12px;
+  border-color: white;
+
+  transition: background-color 0.3s ease;
+}
+
+.topics {
+  
+  flex:1;
+}
+#yo {
+  margin-top:30px;
+  
+  margin-bottom: 30px;
+}
+.problems {
+  background-color: navy;
+}
+.container {
+  display:flex;
+}
+.problem{
+  
+  display: relative;
+  
+  
+}
+.status div{
+ background-color: navy;
+ color:white;
+ width: 300px;
+ height:50px;
+ 
+ border-color:white;
+ text-align:center;
+}
+.status {
+ padding-left: 30px;
+  padding-bottom: 30px;
+  display:flex;
+}
+.topic{
+  flex:1;
+}
+.problem{
+  flex:2;
+  background-color: navy;
+}
+.rating{
+  flex:0.5;
+  background-color: navy;
+}
+.to-do{
+  flex:0.25;
+  background-color: navy;
+}
+.fav{
+  flex:0.25;
+  background-color: navy;
+}
+.problem button {
+  align-items: flex-end;
+}
+#yup div {
+    height:500px;
+}
+#go {
+    padding-top: 30px;
+}
+.dropdown {
+    padding-left: 100px;
+}
+.btn-group {
+  margin-left: 50px;
+}
+.table {
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  
+}
+.head {
+  display: inline-flex;
+  justify-content: center;
+  background-color: rgba(3, 55, 75, 0.352);;
+  background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/02/Amazing-Free-Navy-Blue-Texture-Background.jpg);
+}
+.head img{
+  width: 200px;
+  height: 150px;
+}
+.to{
+  margin-top: 30px;
+  margin-left: 500px;
+  margin-right:500px;
+  color:white;
+  font-size: xx-large;
+  font-weight:bolder;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+.flex{
+  display: flex;
+  justify-content: center;
+}
+thead {
+  background-color: blue;
+}
+nav{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.star {
+  position: relative;
+  
+  display: inline-block;
+  width: 0;
+  height: 0;
+  
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  
+  border-right:  .3em solid transparent;
+  border-bottom: .7em  solid #FC0;
+  border-left:   .3em solid transparent;
+
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+  
+  &:before, &:after {
+    content: '';
+    
+    display: block;
+    width: 0;
+    height: 0;
+    
+    position: absolute;
+    top: .6em;
+    left: -1em;
+  
+    border-right:  1em solid transparent;
+    border-bottom: .7em  solid #FC0;
+    border-left:   1em solid transparent;
+  
+    transform: rotate(-35deg);
+  }
+  
+  &:after {  
+    transform: rotate(35deg);
+  }
+}
+  </style>
+  <script src="problem.js"></script>
+
+  </head>
+  <body>
+    <header class="py-3 mb-4 border-bottom" data-bs-theme="dark">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">HERE,OUR LOGO!</span>
+        </a>
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <nav class="navbar bg-body-">
+        
+      <div class="container-fluid">
+        <a class="navbar-brand"></a>
+          <button class="btn btn-outline-success" id="myButton" class="float-left submit-button" >Back</button>
+
+            <script type="text/javascript">
+                document.getElementById("myButton").onclick = function () {
+                    location.href = "/main";
+                };
+            </script>
+        
+      </div>
+    </nav>
+    <div>
+    <div class="head">
+      <img src="https://th.bing.com/th/id/OIP.DFk6kC0wQU6uUWBfbxspwgHaHa?pid=ImgDet&w=800&h=800&rs=1">
+      <h1 class="to">MY TO-DO LIST</h1>
+      <img src="https://th.bing.com/th/id/OIP.6RxXI3l9G8ZBTbEFQXgaDgAAAA?pid=ImgDet&rs=1"/>
+    </div>
+  </div>
+    
+      <nav class="navbar bg-body-">
+        <div class="container-fluid">
+            <a class="navbar-brand"></a>
+            <form class="d-flex" role="search" method="post">
+              <input class="form-control me-2"  type="text" name="search" placeholder="Search PROBLEMS" aria-label="Search ">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              </div>
+        
+      </nav>
+      
+      
+      <!-- Large button groups (default and split) -->
+<!-- <div class="btn-group">
+  <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    DIFFICULTY LEVEL
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="/products?level=1000">1-1000</a></li>
+    <li><a href="/products?level=1300">1000-1300</a></li>
+    <li><a href="/products?level=1600">1300-1600</a></li>
+    <li><a href="/products?level=1900">1600-1900</a></li>
+    <li><a href="/products?level=2200">1900-2200</a></li>
+    <li><a href="/products?level=2500">2200-2500</a></li>
+    <li><a href="/products?level=5000">2500-5000</a></li>
+    
+    <li><a href="/products">1300-1600</a></li>
+  </ul>
+</div>
+<div class="btn-group">
+  <button class="btn btn-success btn-lg" type="button">
+    TOPICS
+  </button>
+  <button type="button" class="btn btn-lg btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="products?topic=math"    >   MATH      </a></li>
+    <li><a href="problems?topic=array"   >   ARRAYS      </a></li>
+    <li><a href="problems?topic=binary search"  >   BINARY SEARCH       </a></li>
+    <li><a href="problems?topic=string"     >   STRINGS             </a></li>
+    <li><a href="problems?topic=greedy algorithm"  >   GREEDY ALGORITHMS   </a></li>
+    <li><a href="problems?topic=dynamic programming"      >   DYNAMIC PROGRAMMING </a></li>
+    <li><a href="problems?topic=graphs"   >   GRAPHS              </a></li>
+    <li><a href="problems?topic=sorting" >   SORTING             </a></li>
+    <li><a href="problems?topic=data structure"    >   DATA STRUCTURES     </a></li>
+    <li><a href="problems?topic=segment trees"    >   TREES               </a></li>
+    <li><a href="problems?topic=basic programming"    >   BASIC PROGRAMMING             </a></li>
+
+  </ul>
+</div> -->
+<table class="table" data-bs-theme="dark">
+  <thead>
+    
+  </thead>
+
+  <tbody>
+    <% todu.forEach(todus => { %>
+        
+
+        
+    
+
+      <tr>
+          
+              <td><a href=<%=todus.link%>><%= todus.name %></a></td>  
+              <td><%= todus.topic %> </td>
+              <td><%= todus.level %> </td>
+              <!-- <td><input type="checkbox" id="username" placeholder="username" name="username" value="copyright">
+              </td> -->
+              
+              <td>
+               
+                     
+                <a href="/delete/todo/<%= todus._id %>"
+                    class="btn btn-danger btn-sm">Delete</a> 
+          
+                
+           
+          </td>
+          
+
+              
+      </tr>
+      <% })%>
+    
+
+    
+  </tbody>
+</table>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        
+      </body>
+      <script src="problem.js"></script>
+      </html>
