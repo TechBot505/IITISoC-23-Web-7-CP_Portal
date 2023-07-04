@@ -78,6 +78,11 @@ app.get('/secret', (req,res) => {
     res.render('hlogout')
 })
 
+app.get('/contests', (req,res) => {
+    
+    res.render('contests')
+})
+
 
 
 app.listen(3000, () =>
