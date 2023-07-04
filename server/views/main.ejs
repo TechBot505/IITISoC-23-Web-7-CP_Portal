@@ -11,7 +11,7 @@
     background-color: rgb(22, 23, 35);
 }
 nav {
-    background-color: rgba(3, 55, 75, 0.352);
+    background-color: #011535;
     
 }
 .container {
@@ -22,6 +22,305 @@ nav {
     padding-top: 30px;
     padding-left: 50px;
 }
+
+@font-face {
+        font-family: arista-pro;
+        src: url("../utilities/fonts/arista-pro-alternate-regular.ttf");
+      }
+      
+      @font-face {
+        font-family: sf-pro;
+        src: url("../utilities/fonts/sf-pro-display-regular.otf");
+      }
+      
+      html {
+        font-size: 16px;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sf-pro;
+        cursor: default;
+        font-size: var(--normal-text);
+      }
+      
+      :root {
+        --main-heading-text: 2rem;
+        --main-heading-spacing: 1rem;
+        --sub-main-heading-text: 2rem;
+        --main-heading-letter-spacing: 0.1rem;
+        --normal-text: 1.2rem;
+        --contest-text: 1rem;
+        --midnightblue: #0b7ffb;
+        --selector-color: white;
+        --dark-grey:rgb(22,23,35);
+        --grey: #011535;
+        --blue-green: #0f00b5;
+        --white: #eeeeee;
+      }
+      
+      body {
+        padding: 0 10px;
+        box-sizing: border-box;
+        background-color: var(--dark-grey);
+        color: var(--white);
+      }
+      
+      #main {
+        max-width: 1400px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      
+      #overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 10;
+      }
+      
+      #overlay.active {
+        display: block;
+        pointer-events: all;
+      }
+      
+      nav {
+        display: grid;
+        place-items: center;
+      }
+      
+      nav > h1 {
+        font-weight: 600;
+        word-spacing: var(--main-heading-spacing);
+        font-size: var(--main-heading-text);
+        letter-spacing: var(--main-heading-letter-spacing);
+      }
+      
+      #arrow-icon {
+        padding: 5px;
+        cursor: pointer;
+      }
+      
+      #custom-select-menu {
+        width: 18%;
+        min-width: 220px;
+        margin: 20px 0;
+        align-self: start;
+      }
+      
+      #select-menu {
+        z-index: 20;
+        position: relative;
+        font-size: var(--normal-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px var(--midnightblue);
+        border-radius: 20px;
+        background-color: var(--grey);
+      }
+      
+      #current-option {
+        width: 80%;
+        display: flex;
+        white-space: nowrap;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      #for-hiding {
+        z-index: 20;
+      }
+      
+      #options {
+        background-color: var(--grey);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0px;
+        width: 100%;
+        overflow: hidden;
+        pointer-events: all;
+        margin-top: 10px;
+        max-height: 250px;
+        border-radius: 20px;
+        box-shadow: 0 0 5px var(--midnightblue);
+      }
+      
+      #options.active {
+        border-radius: 10px;
+        overflow: scroll;
+        animation: increaseOptionsHeight 0.2s ease-in-out forwards;
+      }
+      
+      @keyframes increaseOptionsHeight {
+        0% {
+          height: 0;
+        }
+        100% {
+          height: 250px;
+        }
+      }
+      
+      .option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      
+      .option.active {
+        display: none;
+      }
+      
+      .option:hover {
+        background-color: rgba(128, 128, 128, 0.469);
+      }
+      
+      #contest-heading {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        font-size: var(--sub-main-heading-text);
+      }
+      
+      #contest-heading-arrow {
+        font-size: var(--sub-main-heading-text);
+      }
+      
+      #contest-all {
+        display: grid;
+        /* width: 60%; */
+        font-size: var(--contest-text);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 20px 0;
+      }
+      
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      
+      a:hover,
+      a:hover * {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+       
+      .contest {
+        font-size: var(--contest-text);
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        box-shadow: 0 0 5px var(--midnightblue);
+        background-color: var(--grey);
+        /* background-color: red; */
+      }
+      
+      #project-name {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      
+      @media screen and (max-width: 1024px) {
+        #contest-all {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media screen and (max-width: 850px) {
+        #custom-select-menu {
+          align-self: center;
+        }
+      }
+      
+      @media screen and (max-width: 690px) {
+        #contest-all {
+          grid-template-columns: 1fr;
+          width: 70%;
+          margin: 20px auto;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        :root {
+          --main-heading-text: 2rem;
+          --sub-main-heading-text: 1.5rem;
+          --main-heading-spacing: 0.5rem;
+          --main-heading-letter-spacing: 0.01rem;
+          --normal-text: 1rem;
+          --contest-text: 0.8rem;
+        }
+      
+        .cardDetails > a{
+          /* font-size: var(--main-heading-text); */
+          font-size: 3rem;
+        }
+      }
+      
+      @media screen and (max-width: 300px) {
+        :root {
+          --main-heading-text: 1.6rem;
+          --sub-main-heading-text: 1.2rem;
+          --normal-text: 0.9rem;
+        }
+      }
+      
+      @media screen and (min-width:600px) {
+        .contest {
+          flex-direction: column;
+          padding: 15px;
+        }
+      
+        .cardDetails {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 7px;
+        }
+      
+        #project-name {
+          grid-column: span 2;
+        }
+      
+        
+      }
+      
+      .addImage {
+        background-image: url(../indexdumLogo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 40px;
+        background-position: center;
+      }
+      
+      .cardDetails p {
+        margin-top: 5px;
+      }
 
 
   </style>
@@ -89,17 +388,238 @@ nav {
       
       
     </div>
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6 col-12 col-sm-6">
-            <img src="https://i.imgur.com/xZWFBS5.png" class="card-img-top" alt="...">
+    
+      <div id="overlay"></div>
+    <div id="main">
+      <nav>
+        <h1>Contests Finder</h1>
+      </nav>
+      <div id="custom-select-menu">
+        <div id="select-menu">
+          <div id="current-option">All Platforms</div>
+          <ion-icon id="arrow-icon" name="caret-down-outline"></ion-icon>
+        </div>
+        <div id="for-hiding" style="position: relative">
+          <div id="options">
+            <div class="option active">All Platforms</div>
+            <div class="option">LeetCode</div>
+            <div class="option">CodeForces</div>
+            <div class="option">CodeChef</div>
+            <div class="option">HackerRank</div>
+            <div class="option">HackerEarth</div>
+            <div class="option">TopCoder</div>
+            <div class="option">Kick Start</div>
+            <div class="option">AtCoder</div>
+            <div class="option">CS Academy</div>
           </div>
-          <div class="col-lg-6 col-12 col-sm-6">
-            <p>HERE OUR CONTESTS!!</p>
-          </div>
-          
         </div>
       </div>
+      <div id="contests">
+        <div id="contest-heading">
+          Upcoming Contest
+
+          <ion-icon
+            id="contest-heading-arrow"
+            name="caret-down-outline"
+          ></ion-icon>
+        </div>
+        <div id="contest-all"></div>
+      </div>
+    </div>
+    <script>
+        const api = "https://kontests.net/api/v1";
+
+// const
+const overlay = document.getElementById("overlay");
+const activeOverlay = document.querySelector("#overlay.active");
+const arrow = document.getElementById("arrow-icon");
+const optionsDiv = document.getElementById("options");
+const options = Array.from(document.getElementsByClassName("option"));
+const currentOption = document.getElementById("current-option");
+const contestDiv = document.getElementById("contest-all");
+
+const currentSelectionQueries = {
+  "All Platforms": "all",
+  LeetCode: "leet_code",
+  CodeForces: "codeforces",
+  CodeChef: "code_chef",
+  HackerRank: "hacker_rank",
+  HackerEarth: "hacker_earth",
+  TopCoder: "top_coder",
+  "Kick Start": "kick_start",
+  AtCoder: "at_coder",
+  "CS Academy": "cs_academy",
+};
+
+const callTypeQueries = {
+  leet_code: "LeetCode",
+  codeforces: "CodeForces",
+  code_chef: "CodeChef",
+  hacker_rank: "HackerRank",
+  hacker_earth: "HackerEarth",
+  top_coder: "TopCoder",
+  kick_start: "Kick Start",
+  at_coder: "AtCoder",
+  cs_academy: "CS Academy",
+};
+
+arrow.addEventListener("click", () => {
+  closeSelectionMenu();
+});
+
+overlay.addEventListener("click", () => {
+  closeSelectionMenu();
+});
+
+options.forEach((option) => {
+  option.addEventListener("click", (e) => makeSelection(e));
+});
+
+async function fetchCurrentSelection() {
+  let currentSelection = currentOption.textContent;
+  await fetchDataAndDisplay(currentSelectionQueries[currentSelection]);
+}
+
+function closeSelectionMenu() {
+  optionsDiv.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+function makeSelection(e) {
+  options.forEach((option) => {
+    option.classList.remove("active");
+  });
+  e.target.classList.add("active");
+  currentOption.textContent = e.target.textContent;
+  closeSelectionMenu();
+  fetchCurrentSelection();
+}
+
+async function fetchDataAndDisplay(callType) {
+  let result = await fetch(`${api}/${callType}`);
+  result = await result.json();
+  processAndDisplay(result, callType);
+}
+
+function sortAndFilterContest(contests) {
+  contests.sort((a, b) => {
+    let dateA = new Date(a.start_time);
+    let endDateA = new Date(a.end_time);
+    let dateB = new Date(b.start_time);
+    let endDateB = new Date(b.end_time);
+    if (dateA == dateB) return dateA > dateB ? 1 : -1;
+    return endDateA > endDateB ? 1 : 0;
+  });
+
+  return contests;
+}
+
+function setSiteName(callType, currentSite, contest) {
+  if (callType == "all") {
+    currentSite.textContent = `Site : ${contest.site}`;
+    return;
+  }
+
+  currentSite.textContent = `Site : ${callTypeQueries[callType]}`;
+}
+
+function processAndDisplay(result, callType) {
+  contests = sortAndFilterContest(result);
+  displayContests(contests, callType);
+}
+
+function displayContests(result, callType) {
+  contestDiv.innerHTML = "";
+  result.forEach((contest) => {
+    const start_date = new Date(contest.start_time);
+    const end_date = new Date(contest.end_time);
+
+    const currentContestDiv = document.createElement("div");
+    const currentAnchorTag = document.createElement("a");
+    const currentSite = document.createElement("p");
+    currentAnchorTag.id = "project-name";
+    const startDate = document.createElement("p");
+    const endDate = document.createElement("p");
+    const startTime = document.createElement("p");
+    const endTime = document.createElement("p");
+    const duration = document.createElement("p");
+
+    currentContestDiv.classList.add("contest");
+
+    currentAnchorTag.href = `${contest.url}`;
+    currentAnchorTag.target = "_blank";
+    currentAnchorTag.innerHTML = `${contest.name} <ion-icon name="open-outline"></ion-icon>`;
+
+    startDate.textContent = `Start Date : ${start_date.getDate()}/${
+      start_date.getMonth() + 1
+    }/${start_date.getFullYear()}, ${start_date.getHours()}:${start_date.getMinutes()}`;
+    endDate.textContent = `End Date : ${end_date.getDate()}/${
+      end_date.getMonth() + 1
+    }/${end_date.getFullYear()}, ${end_date.getHours()}:${end_date.getMinutes()}`;
+    // startTime.textContent = `Start Time : ${start_date.getHours()}:${start_date.getMinutes()}`;
+    // endTime.textContent = `End Time : ${end_date.getHours()}:${end_date.getMinutes()}`;
+    duration.textContent = `Duration : ${durationSimplifier(contest.duration)}`;
+
+    function durationSimplifier(duration) {
+      let result = "";
+      let days;
+      let hours;
+      let minutes;
+
+      days = Math.floor(duration / 86400);
+      duration = duration % 86400;
+
+      hours = Math.floor(duration / 3600);
+      duration = duration % 3600;
+
+      minutes = Math.floor(duration / 60);
+      duration = duration % 60;
+
+      if (days != 0) result = result + days + " Days ";
+
+      if (hours != 0) result = result + hours + " Hours ";
+
+      if (minutes != 0) result = result + minutes + " Minutes";
+
+      return result;
+    }
+
+    setSiteName(callType, currentSite, contest);
+
+    contestDiv.append(currentContestDiv);
+
+    const CardLogo = 
+      document.createElement("div")
+      CardLogo.classList.add("addImage")
+
+
+    currentContestDiv.appendChild(CardLogo)
+    const CardDetail = 
+      document.createElement("div")
+    CardDetail.append(currentAnchorTag);
+    CardDetail.append(currentSite);
+    CardDetail.append(startDate);
+    CardDetail.append(endDate);
+    CardDetail.append(duration);
+
+      CardDetail.classList.add("cardDetails")
+
+
+    currentContestDiv.appendChild(CardDetail)
+  });
+}
+
+fetchDataAndDisplay("all");
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+        
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -167,6 +167,6 @@ Product.insertMany([
 ])
 .then(data => {
     
-     console.log(data);
+     //console.log(data);
 })
 module.exports= Product; 

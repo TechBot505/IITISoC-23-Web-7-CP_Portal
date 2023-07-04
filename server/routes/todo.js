@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const Product = require('../models/Todu');
-const Todu = require("../Todo");
+const Todu = require('../models/Todu');
+
 const User= require('../models/user');
 
 // routes
