@@ -1,0 +1,229 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="style3.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <style>
+    li {
+            list-style:none;
+        }
+        a{
+            text-decoration: none;
+            color:#fff;
+            font-size: 1rem;
+        }
+        a:hover{
+            color:skyblue;
+        }
+        header{
+            position: relative;
+            padding: 0 2rem;
+            background-color: #144272;
+        }
+        .navbar {
+            width:100%;
+            height:60px;
+            max-width: 1200px;
+            margin:0 auto;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar .logo a{
+            font-size: 3rem;
+            font-weight:bold;
+
+        }
+        .navbar .links{
+            display: flex;
+            gap:2rem;
+        }
+        ul li a{
+            font-size:1.5rem;
+        }
+        .navbar .toggle_btn {
+            color:#fff;
+            font-size:2rem;
+            cursor:pointer;
+            display:none;
+        }
+        .btn {
+            display:flex;
+            justify-content: space-around;
+        }
+        .action-btn{
+            font-size: 1.5rem;
+            background-color: #39b5e0;
+            color:#fff;
+            padding:0.5rem 1rem;
+            margin-right:5px;
+            border:none;
+            outline:none;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            cursor:pointer;
+            transition: scale 0.2 ease;
+        }
+        .action-btn:hover{
+            scale:1.05;
+            color:#fff;
+        }
+        .action-btn:active {
+            scale:0.95;
+        }
+        .dropdown_menu {
+            display:none;
+            position:absolute;
+            right:2rem;
+            top:60px;
+            height:0;
+            width:300px;
+            backdrop-filter: blur(15px);
+            border-radius:10px;
+            overflow:hidden;
+            transition:height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .dropdown_menu.open{
+            height:370px;
+        }
+        .dropdown_menu li{
+            padding:0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .dropdown_menu .action-btn{
+            width:100%;
+            display:flex;
+            justify-content: center;
+        
+        }
+        .row {
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            margin:100px 0;
+        }
+        .col-1 {
+            flex-basis:40%;
+            position:relative;
+            margin-left:50px;
+        }
+        .col-1 h1{
+            font-size: 54px;
+            color:#39b5e0;
+
+        }
+        .col-1 p{
+            font-size:24px;
+            color:#fff;
+            font-weight: 100;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 30px 0;
+       
+        }
+        .col-2{
+            margin-right: 10%;
+        }
+        img {
+            width:90%;
+        }
+        
+         @media only screen and (max-width: 700px){
+            .navbar .links,
+            .navbar .action-btn{
+                display:none;
+            }
+            .navbar .toggle_btn{
+                display:block;
+        
+            }
+            .dropdown_menu{
+                display:block;
+            }
+            .row {
+                flex-direction:column-reverse;
+                margin: 50px 0;
+            }
+            .col-2 {
+                flex-basis:100%;
+                margin-bottom:50px;
+
+            }
+            .col-2 img{
+                width:78%;
+                padding-left: 20%;
+
+            }
+            .col-1{
+                flex-basis:100%;
+
+            }
+            .col-1 h1{
+                font-size: 35px;
+            }
+            .col-1 p{
+                font-size:18px;
+            }
+            }
+        @media (max-width: 576px) {
+            .dropdown_menu {
+                left:2rem;
+                width:unset;
+            }
+        }
+        
+        </style>
+        <body>
+            <header>
+                <div class="navbar">
+                    <div class="logo"><a href="#">Name</a></div>
+                    <ul class="links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contests</a></li>
+                        <li><a href="#">Learn</a></li>
+                        <li><a href="#">Problems</a></li>
+                        <li><a href="#">To-do</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                    <div class="btn">
+                    <a href="#" class="action-btn">Login</a>
+                    <a href="#" class="action-btn">Register</a>
+                    </div>
+                    <div class="toggle_btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+                <div class="dropdown_menu">
+                    <li><a href="#">Home</a></li>
+                        <li><a href="#">Contests</a></li>
+                        <li><a href="#">Learn</a></li>
+                        <li><a href="#">Problems</a></li>
+                        <li><a href="#">To-do</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#" class="action-btn">Login</a></li>
+                       <li><a href="#" class="action-btn">Register</a></li>
+                </div>
+            </header>
+              <nav class="navbar bg-body-">
+                    
+                <div class="container-fluid">
+                  <a class="navbar-brand"></a>
+                    <button class="btn btn-outline-success" id="myButton" class="float-left submit-button" >Back</button>
+            
+                      <script type="text/javascript">
+                          document.getElementById("myButton").onclick = function () {
+                              location.href = "/main";
+                          };
+                      </script>
+                  
+                </div>
+                  </nav>
+            
+        </body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+        </html>
