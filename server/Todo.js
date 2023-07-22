@@ -159,8 +159,51 @@ Product.insertMany([
   { name:'Children trips',link:'https://www.codechef.com/problems/TRIPS',level:2899,website:'Codechef',topic:['graph'] },
   { name:'Tree',link:'https://www.codechef.com/problems/RRTREE',level:2936,website:'Codechef',topic:['segment trees'] },
   { name:'Chef and divisors',link:'https://www.codechef.com/problems/DIVISOR',level:2932,website:'Codechef',topic:['basic programming'] },
+
+  // {name:'Zoos',link:'https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/is-zoo-f6f309e7/',level:'easy',website:'Hackerearth',topic:['basic programming']},
+  // {name:'Divisibility',link:'https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/divisible-or-not-81b86ad7/',level:'easy',website:'Hackerearth',topic:['basic programming']},
+  // {name:'Cost of Balloons',link:'https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/mojtaba-prepares-contest-29b2a044/',level:'easy',website:'Hackerearth',topic:['basic programming']},
+  // {name:'Toggle String',link:'https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/modify-the-string/',level:'easy',website:'Hackerearth',topic:['basic programming']},
+
+  // {name:'Best Index',link:'https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/best-index-1-45a2f8ff/',level:'medium',website:'Hackerearth',topic:['basic programming']},
+  // {name:'Number of steps',link:'https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/make-all-equal-90a21ab2/',level:'medium',website:'Hackerearth',topic:['basic programming']},
+  // {name:'Minimize cost',link:'https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/minimise-cost-89b54cb9/',level:'medium',website:'Hackerearth',topic:['basic programming']},
+  // {name:'Prime Array',link:'https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/practice-problems/algorithm/prime-array-5e448ef6/',level:'easy',website:'Hackerearth',topic:['math']},
+  // {name:'Joseph and Array',link:'https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/practice-problems/algorithm/joseph-and-arrayaugclash/',level:'easy',website:'Hackerearth',topic:['math']},
+  // {name:'Unlock the door',link:'https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/practice-problems/algorithm/name-count/',level:'easy',website:'Hackerearth',topic:['math']},
+  // {name:'The confused monk',link:'https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/practice-problems/algorithm/the-confused-monk/',level:'easy',website:'Hackerearth',topic:['math']},
+  // {name:'Archery',link:'https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/practice-problems/algorithm/archery-1/',level:'medium',website:'Hackerearth',topic:['math']},
+  // {name:'DieDie',link:'https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/practice-problems/algorithm/diedie/',level:'medium',website:'Hackerearth',topic:['math']},
+  // {name:'The Dragon Type',link:'https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/practice-problems/algorithm/the-dragon-type-123/',level:'medium',website:'Hackerearth',topic:['math']},
+  // {name:'Alice and candies',link:'https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/practice-problems/algorithm/lola-and-candies-36b57b1b/',level:'medium',website:'Hackerearth',topic:['math']},
+  // {name:'F Lucas and Stickman',link:'https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/practice-problems/algorithm/f-lukas-and-stickman/',level:'hard',website:'Hackerearth',topic:['math']},
+  // {name:'Connected Components',link:'https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/practice-problems/algorithm/connected-components-1/',level:'hard',website:'Hackerearth',topic:['math']},
+
+  // {name:'Tram ride',link:'https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/tram-ride-255849f5/',level:'easy',website:'Hackerearth',topic:['data structure']},
+  // {name:'Double Inversions',link:'https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/double-inversions-2-881a7d34/',level:'easy',website:'Hackerearth',topic:['data structure']},
+  // {name:'Maximize the sum',link:'https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/maximize-sum-0423b95e/',level:'easy',website:'Hackerearth',topic:['data structure']},
+  // {name:'Minimum operations',link:'https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/minimum-operations-2-8000e855/',level:'easy',website:'Hackerearth',topic:['data structure']},
+  // {name:'Permutations',link:'https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/nevedle-and-permutations-c6acb85e/',level:'medium',website:'Hackerearth',topic:['data structure']},
+  // {name:'K-Jump',link:'https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/long-jump-1-7d02705a/',level:'medium',website:'Hackerearth',topic:['data structure']},
+  // {name:'Fixed parities',link:'https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/fixed-parity-440254c0/',level:'medium',website:'Hackerearth',topic:['data structure']},
+  // {name:'In an array',link:'https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/in-an-array-9fbe4c12/',level:'medium',website:'Hackerearth',topic:['data structure']},
+  // {name:'Little jhool',link:'https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/litte-jhool-and-world-tour-1/',level:'hard',website:'Hackerearth',topic:['math']},
+  // {name:'Large sub-arrays',link:'https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/large-sub-arrays-5bd8005b/',level:'hard',website:'Hackerearth',topic:['math']},
+
+  // {name:'Equal diverse terms',link:'https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/equal-diverse-teams-cbdb8fe2/',level:'easy',website:'Hackerearth',topic:['algorithms']},
+  // {name:'Equal parity',link:'https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/equal-diverse-teams-cbdb8fe2/',level:'easy',website:'Hackerearth',topic:['algorithms']},
+  // {name:'Max Difference',link:'https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/max-difference-3-a5f48242/',level:'easy',website:'Hackerearth',topic:['algorithms']},
+  // {name:'Adjacent Parity',link:'https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/adjacent-parity-10c93d7a/',level:'easy',website:'Hackerearth',topic:['algorithms']},
+  // {name:'Count MEX',link:'https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/count-mex-8dd2c00c/',level:'medium',website:'Hackerearth',topic:['algorithms']},
+  // {name:'Attendance',link:'https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/attendance-72-5c241efb/',level:'medium',website:'Hackerearth',topic:['algorithms']},
+  // {name:'Special Shop',link:'https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/special-shop-69904c91/',level:'medium',website:'Hackerearth',topic:['algorithms']},
+  // {name:'Policeman and thieves',link:'https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/joker-and-thieves-53e59f4a/',level:'medium',website:'Hackerearth',topic:['algorithms']},
+  // {name:'Guess Permutation',link:'https://www.hackerearth.com/practice/algorithms/searching/linear-search/practice-problems/algorithm/permutation-swaps-2-01766245/',level:'hard',website:'Hackerearth',topic:['algorithms']}
+  
   
 
+
+ 
   
   
  
