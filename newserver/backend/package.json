@@ -79,6 +79,7 @@
     "tailwindcss": "^3.3.2"
   },
   "scripts": {
+    "start":"node app.js",
     "build": "tailwindcss -i ./style.css -o ./main.css ",
     "watch": "tailwindcss -i ./style.css -o ./main.css --watch"
   },
