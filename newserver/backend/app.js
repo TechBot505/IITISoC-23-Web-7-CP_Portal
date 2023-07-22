@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
-
+const path=require('path');
 const app = express();
 
 // Passport Config
@@ -30,7 +30,7 @@ require('./config/passport')(passport);
       console.log("connection open!");
   });
 // EJS
-
+app.set('views', path.join(__dirname, '../frontend/views')); 
 app.set('view engine', 'ejs');
 
 // Express body parser
