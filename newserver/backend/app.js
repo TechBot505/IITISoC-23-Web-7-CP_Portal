@@ -30,7 +30,11 @@ require('./config/passport')(passport);
       console.log("connection open!");
   });
 // EJS
+
 app.set('views', path.join(__dirname, '../frontend/views'))
+
+app.set('views', path.join(__dirname, '../frontend/views')); 
+
 app.set('view engine', 'ejs');
 
 // Express body parser
