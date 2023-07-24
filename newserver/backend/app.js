@@ -21,14 +21,21 @@ require('./config/passport')(passport);
 //   )
 //   .then(() => console.log('MongoDB Connected'))
 //   .catch(err => console.log(err));
-  mongoose.connect('mongodb://127.0.0.1:27017/user',{ useNewUrlParser: true ,useUnifiedTopology: true});
-  
 
-  const db=mongoose.connection;
-  db.on('error',console.error.bind(console, 'connection error:'));
-  db.once('open',function () {
-      console.log("connection open!");
-  });
+const url="mongodb+srv://aradhyashant:kSNfEYH4mKTFrdnT@cluster0.tulvefc.mongodb.net/?retryWrites=true&w=majority"
+const connection={
+    useNewUrlParser:true,
+    useUnifiedTopology: true,
+
+};
+
+mongoose.connect(url,connection)
+.then(()=>{
+    console.info("connected");
+})
+.catch((e)=>{
+    console.log("err",e);
+});
 // EJS
 
 app.set('views', path.join(__dirname, '../frontend/views'))
