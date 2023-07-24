@@ -6,7 +6,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const path=require('path');
 const app = express();
-
+const MongoClient=require('mongodb');
 // Passport Config
 require('./config/passport')(passport);
 
@@ -21,13 +21,15 @@ require('./config/passport')(passport);
 //   )
 //   .then(() => console.log('MongoDB Connected'))
 //   .catch(err => console.log(err));
+const url="mongodb+srv://aradhyashant:bY2NE9rZqLJKcL5r@cluster0.tulvefc.mongodb.net/";
 
-const url="mongodb+srv://aradhyashant:kSNfEYH4mKTFrdnT@cluster0.tulvefc.mongodb.net/?retryWrites=true&w=majority"
+
 const connection={
     useNewUrlParser:true,
     useUnifiedTopology: true,
 
 };
+
 
 mongoose.connect(url,connection)
 .then(()=>{
