@@ -2,14 +2,18 @@ const mongoose = require('mongoose');
 const Product = require('./Todo');
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/wow',{ useNewUrlParser: true ,useUnifiedTopology: true});
-  
-
-  const db=mongoose.connection;
-  db.on('error',console.error.bind(console, 'connection error:'));
-  db.once('open',function () {
-      console.log("connection open!");
-  });
+const url="mongodb+srv://akankshaprasad7458:Fe991QJCxG7kMLtL@cluster0.kug2arm.mongodb.net/";
+const connection={
+    useNewUrlParser:true,
+    useUnifiedTopology: true,
+};
+mongoose.connect(url,connection)
+.then(()=>{
+    console.info("connected");
+})
+.catch((e)=>{
+    console.log("err",e);
+});
     // EJS
 // const p = new Product({
 //     name: 'Ruby Grapefruit',

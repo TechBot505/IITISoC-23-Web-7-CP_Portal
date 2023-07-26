@@ -105,6 +105,67 @@ router.get("/problem", async(req, res) => {
       const allProduct = await Product.find({name:new RegExp(search, 'i')});
       res.render("index",{product: allProduct});
     })
+    router.get("/all",async(req,res)=>{
+      const allProduct = await Product.find({});
+      res.render("index",{product: allProduct,user:req.user});
+    })
+    router.get("/1000",async(req,res)=>{
+      const allProduct = await Product.find({ level:{$lte:1000} })
+          res.render("index", {product: allProduct,user:req.user })
+    })
+    router.get("/1300",async(req,res)=>{
+      const allProduct = await Product.find({ level:{$lte:1300,$gte:1000} })
+          res.render("index", {product: allProduct,user:req.user })
+    })
+    router.get("/1600",async(req,res)=>{
+      const allProduct = await Product.find({ level:{$lte:1600,$gte:1300} })
+          res.render("index", {product: allProduct,user:req.user })
+    })
+    router.get("/1900",async(req,res)=>{
+      const allProduct = await Product.find({ level:{$lte:1900,$gte:1600} })
+          res.render("index", {product: allProduct,user:req.user })
+    })
+    router.get("/2200",async(req,res)=>{
+      const allProduct = await Product.find({ level:{$lte:2200,$gte:1900} })
+          res.render("index", {product: allProduct,user:req.user })
+    })
+    router.get("/2500",async(req,res)=>{
+      const allProduct = await Product.find({ level:{$lte:2500,$gte:2200} })
+          res.render("index", {product: allProduct,user:req.user })
+    })
+    router.get("/math",async(req,res)=>{
+      const allProduct=await Product.find({topics:'math'});
+      res.render("index",{product:allProduct,user:req.user})
+    })
+    router.get("/array",async(req,res)=>{
+      const allProduct=await Product.find({topics:'array'});
+      res.render("index",{product:allProduct,user:req.user})
+    })
+    router.get("/string",async(req,res)=>{
+      const allProduct=await Product.find({topics:'string'});
+      res.render("index",{product:allProduct,user:req.user})
+    })
+    router.get("/sorting",async(req,res)=>{
+      const allProduct=await Product.find({topics:'sorting'});
+      res.render("index",{product:allProduct,user:req.user})
+    })
+    router.get("/basic programming",async(req,res)=>{
+      const allProduct=await Product.find({topics:'basic programming'});
+      res.render("index",{product:allProduct,user:req.user})
+    })
+    router.get("/data structure",async(req,res)=>{
+      const allProduct=await Product.find({topics:'data structure'});
+      res.render("index",{product:allProduct,user:req.user})
+    })
+    router.get("/greedy algorithm",async(req,res)=>{
+      const allProduct=await Product.find({topics:'greedy algorithm'});
+      res.render("index",{product:allProduct,user:req.user})
+    })
+    router.get("/dynamic programming",async(req,res)=>{
+      const allProduct=await Product.find({topics:'dynamic programming'});
+      res.render("index",{product:allProduct,user:req.user})
+    })
+    
     router.get("/codeforces",async(req,res)=>{
       const allProduct = await Product.find({website:'Codeforces'});
       res.render("codeforces",{product: allProduct,user:req.user})
