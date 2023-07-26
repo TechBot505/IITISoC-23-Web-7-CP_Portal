@@ -21,24 +21,14 @@ require('./config/passport')(passport);
 //   )
 //   .then(() => console.log('MongoDB Connected'))
 //   .catch(err => console.log(err));
-const url="mongodb+srv://aradhyashant:bY2NE9rZqLJKcL5r@cluster0.tulvefc.mongodb.net/";
+mongoose.connect('mongodb://127.0.0.1:27017/wow',{ useNewUrlParser: true ,useUnifiedTopology: true});
+  
 
-
-const connection={
-    useNewUrlParser:true,
-    useUnifiedTopology: true,
-
-};
-
-
-mongoose.connect(url,connection)
-.then(()=>{
-    console.info("connected");
-})
-.catch((e)=>{
-    console.log("err",e);
-});
-// EJS
+  const db=mongoose.connection;
+  db.on('error',console.error.bind(console, 'connection error:'));
+  db.once('open',function () {
+      console.log("connection open!");
+  });
 
 app.set('views', path.join(__dirname, '../frontend/views'))
 
@@ -75,6 +65,7 @@ app.use(function(req, res, next) {
 
 // Routes
 app.use('/', require('./routes/index.js'));
+
 app.use('/',require('./routes/todo.js'))
 app.use('/users', require('./routes/users.js'));
 app.post('/logout', (req,res) =>{
