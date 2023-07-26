@@ -105,6 +105,19 @@ router.get("/problem", async(req, res) => {
       const allProduct = await Product.find({name:new RegExp(search, 'i')});
       res.render("index",{product: allProduct});
     })
+    router.get("/codeforces",async(req,res)=>{
+      const allProduct = await Product.find({website:'Codeforces'});
+      res.render("codeforces",{product: allProduct,user:req.user})
+    })
+    router.get("/codeforces/1000",async(req,res)=>{
+      const allProduct = await Product.find({website:'Codeforces',topic:'math'});
+      res.render("codeforces",{product: allProduct,user:req.user})
+    })
+    router.get("/pulkit",async(req,res)=>{
+      const allProduct = await Product.find({topic:'math'});
+      res.render("index",{product: allProduct,user:req.user})
+    })
+
    router.post("/please/:id",async(req,res)=>{
       var search=req.body.search;
       const allTodu=await Todu.find({name:new RegExp(search, 'i')});

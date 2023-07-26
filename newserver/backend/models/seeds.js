@@ -1,15 +1,16 @@
 const mongoose = require('mongoose');
-const Product = require('./product');
+const Product = require('./Todo');
 
-mongoose.connect('mongodb://127.0.0.1:27017/trial1', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("MONGO CONNECTION OPEN!!!")
-    })
-    .catch(err => {
-        console.log("OH NO MONGO CONNECTION ERROR!!!!")
-        console.log(err)
-    })
 
+mongoose.connect('mongodb://127.0.0.1:27017/wow',{ useNewUrlParser: true ,useUnifiedTopology: true});
+  
+
+  const db=mongoose.connection;
+  db.on('error',console.error.bind(console, 'connection error:'));
+  db.once('open',function () {
+      console.log("connection open!");
+  });
+    // EJS
 // const p = new Product({
 //     name: 'Ruby Grapefruit',
 //     price: 1.99,
@@ -27,6 +28,51 @@ const seedProducts = [
     // 
    
     Product.insertMany([
+        {
+    
+            name: 'Advantage',
+            link: 'https://codeforces.com/problemset/problem/1760/C',
+            level: 800,
+            website: 'Codeforces',
+            topic: [ 'data_structures', 'implementation', 'sortings' ],
+            
+          },
+          {
+           
+            name: "I'm bored with life",
+            link: 'https://codeforces.com/problemset/problem/822/A',
+            level: 800,
+            website: 'Codeforces',
+            topic: [ 'implementation', 'math', 'number_theory' ],
+            
+          },
+          {
+            
+            name: 'The Cake Is a Lie',
+            link: 'https://codeforces.com/problemset/problem/1519/B',
+            level: 800,
+            website: 'Codeforces',
+            topic: [ 'dp', 'math' ],
+            
+          },
+          {
+            
+            name: 'Anton and Digits',
+            link: 'https://codeforces.com/problemset/problem/734/B',
+            level: 800,
+            website: 'Codeforces',
+            topic: [ 'greedy', 'implementation', 'math' ],
+            
+          },
+          {
+            
+            name: 'Password',
+            link: 'https://codeforces.com/problemset/problem/1743/A',
+            level: 800,
+            website: 'Codeforces',
+            topic: [ 'implementation', 'math' ],
+            
+          },
         { name:'My very 1st contest',link:'https://www.codechef.com/problems/MY1STCONTEST',level:284,website:'Codechef',topic:['math'] },
         { name:'EmailRemainders',link:'https://www.codechef.com/problems/EMAILREM',level:379,website:'Codechef',topic:['math'] },
         { name:'Chef and Instant Noodles',link:'https://www.codechef.com/problems/INSTNOODLE',level:456,website:'Codechef',topic:['math'] },
