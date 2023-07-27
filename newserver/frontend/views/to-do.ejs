@@ -219,6 +219,25 @@ nav{
             background-color: #0a2647;
 
         }
+        .logo img{
+           
+            height:65px;
+            padding-top:10px;
+            padding-right:10px;
+            width:80px;
+           border-radius:50%
+        }
+        .logo {
+            display:flex;
+
+        }
+        .logo a{
+            font-size: 40px;
+            padding-top:10px;
+            font-weight: bold;
+            
+
+        }
         li {
             list-style:none;
         }
@@ -232,7 +251,7 @@ nav{
         }
         header{
             position: relative;
-            padding: 0 2rem;
+           height:80px;
             background-color: #144272;
         }
         .navbar {
@@ -243,13 +262,8 @@ nav{
             display:flex;
             align-items: center;
             justify-content: space-between;
-            
         }
-        .navbar .logo a{
-            font-size: 3rem;
-            font-weight:bold;
-
-        }
+        
         .navbar .links{
             display: flex;
             gap:2rem;
@@ -295,7 +309,8 @@ nav{
             top:60px;
             height:0;
             width:300px;
-            
+            background:rgba(255,255,255,0.1);
+
             z-index: 10;
             border-radius:10px;
             overflow:hidden;
@@ -391,35 +406,6 @@ nav{
                 width:unset;
             }
         }
-        .logo img{
-           
-           height:65px;
-           padding-top:10px;
-           padding-right:10px;
-           width:80px;
-          border-radius:50%
-       }
-       .logo {
-           display:flex;
-
-       }
-       .logo a{
-           font-size: 40px;
-           padding-:10px;
-           font-weight: bold;
-           
-
-
-       }
-       .del{
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        width:100px;
-        height:40px;
-        border-radius: 12px;
-        background-image:linear-gradient(45deg, #020638,#059083) ;
-       }
   </style>
  
 
@@ -430,20 +416,28 @@ nav{
           <div class="logo"><img src="../public/images/WhatsApp Image 2023-07-22 at 11.31.04.jpg "/>
               <a href="#">CP-PORTAL</a></div>
           <ul class="links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Contests</a></li>
-              <li><a href="#">Learn</a></li>
-              <li><a href="#">Problems</a></li>
-              <li><a href="#">To-do</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/dashboard">Home</a></li>
+              <li><a href="/main">Contests</a></li>
+              <li><a href="/learn">Learn</a></li>
+              <li><a href="/problem">Problems</a></li>
+              <li><a href="please<%=user.id%>">To-do</a></li>
+              <li><a href="/profile">Contact Us</a></li>
           </ul>
           <div class="mtn">
-          <a href="/users/register" class="action-btn">Logout</a>
+          <a href="/logout" class="action-btn">Logout</a>
           </div>
           <div>
           <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-            </a></div>
+            </a>
+            <ul class="dropdown-menu text-small">
+              <li><a class="dropdown-item" href="#">New project...</a></li>
+              <li><a class="dropdown-item" href="#">Name:<%=user.name%></a></li>
+              <li><a class="dropdown-item" href="#">Email id:<%=user.email%></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
           
          
           <div class="toggle_btn">
@@ -451,17 +445,16 @@ nav{
           </div>
       </div>
       <div class="dropdown_menu">
-          <li><a href="#">Home</a></li>
-              <li><a href="#">Contests</a></li>
-              <li><a href="#">Learn</a></li>
-              <li><a href="#">Problems</a></li>
-              <li><a href="#">To-do</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="/users/register" class="action-btn">Login</a></li>
-             <li><a href="/users/login" class="action-btn">Register</a></li>
+          <li><a href="/dashboard">Home</a></li>
+              <li><a href="/main">Contests</a></li>
+              <li><a href="/learn">Learn</a></li>
+              <li><a href="/problem">Problems</a></li>
+              <li><a href="/please<%=user.id%>">To-do</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="/logout" class="action-btn">Logout</a></li>
+             
       </div>
     </header>
-    
     <div>
     
     
@@ -518,18 +511,18 @@ nav{
 </table>
         
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
-<script>
-  const toggleBtn= document.querySelector('.toggle_btn')
-  const toggleBtnIcon= document.querySelector('.toggle_btn i')
-  const dropDownMenu= document.querySelector('.dropdown_menu')
-  toggleBtn.onclick = function () {
-      dropDownMenu.classList.toggle('open')
-      const isOpen = dropDownMenu.classList.contains('open')
+  <script>
+    const toggleBtn= document.querySelector('.toggle_btn')
+    const toggleBtnIcon= document.querySelector('.toggle_btn i')
+    const dropDownMenu= document.querySelector('.dropdown_menu')
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
 
-      toggleBtnIcon.classList = isOpen
-      ? 'fa-solid fa-xmark'
-      : 'fa-solid fa-bars'
-  }
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
 </script>
         
       </body>
