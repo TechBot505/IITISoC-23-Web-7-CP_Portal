@@ -133,36 +133,36 @@ router.get("/problem", async(req, res) => {
       const allProduct = await Product.find({ level:{$lte:2500,$gte:2200} })
           res.render("index", {product: allProduct,user:req.user })
     })
-    router.get("codechef/math",async(req,res)=>{
-      const allProduct=await Product.find({topics:'math'});
+    router.get("/math",async(req,res)=>{
+      const allProduct=await Product.find({topic:'math'});
       res.render("index",{product:allProduct,user:req.user})
     })
-    router.get("codechef/array",async(req,res)=>{
-      const allProduct=await Product.find({topics:'array'});
+    router.get("/array",async(req,res)=>{
+      const allProduct=await Product.find({topic:'array'});
       res.render("index",{product:allProduct,user:req.user})
     })
-    router.get("codechef/string",async(req,res)=>{
-      const allProduct=await Product.find({topics:'string'});
+    router.get("/string",async(req,res)=>{
+      const allProduct=await Product.find({topic:'string'});
       res.render("index",{product:allProduct,user:req.user})
     })
-    router.get("codechef/sorting",async(req,res)=>{
-      const allProduct=await Product.find({topics:'sorting'});
+    router.get("/sorting",async(req,res)=>{
+      const allProduct=await Product.find({topic:'sorting'});
       res.render("index",{product:allProduct,user:req.user})
     })
-    router.get("codechef/basic programming",async(req,res)=>{
-      const allProduct=await Product.find({topics:'basic programming'});
+    router.get("/basic programming",async(req,res)=>{
+      const allProduct=await Product.find({topic:'basic programming'});
       res.render("index",{product:allProduct,user:req.user})
     })
-    router.get("codechef/data structure",async(req,res)=>{
-      const allProduct=await Product.find({topics:'data structure'});
+    router.get("/data structure",async(req,res)=>{
+      const allProduct=await Product.find({topic:'data structure'});
       res.render("index",{product:allProduct,user:req.user})
     })
-    router.get("codechef/greedy algorithm",async(req,res)=>{
-      const allProduct=await Product.find({topics:'greedy algorithm'});
+    router.get("/greedy algorithm",async(req,res)=>{
+      const allProduct=await Product.find({topic:'greedy algorithm'});
       res.render("index",{product:allProduct,user:req.user})
     })
-    router.get("codechef/dynamic programming",async(req,res)=>{
-      const allProduct=await Product.find({topics:'dynamic programming'});
+    router.get("/dynamic programming",async(req,res)=>{
+      const allProduct=await Product.find({topic:'dynamic programming'});
       res.render("index",{product:allProduct,user:req.user})
     })
     router.get("/codechef",async(req,res)=>{
@@ -197,36 +197,36 @@ router.get("/problem", async(req, res) => {
       const allProduct = await Product.find({ website:'Codechef',level:{$lte:2500,$gte:2200} })
           res.render("codechef", {product: allProduct,user:req.user })
     })
-    router.get("/math",async(req,res)=>{
-      const allProduct=await Product.find({website:'Codechef',topics:'math'});
+    router.get("/codechef/math",async(req,res)=>{
+      const allProduct=await Product.find({website:'Codechef',topic:'math'});
       res.render("codechef",{product:allProduct,user:req.user})
     })
-    router.get("/array",async(req,res)=>{
-      const allProduct=await Product.find({website:'Codechef',topics:'array'});
+    router.get("/codechef/array",async(req,res)=>{
+      const allProduct=await Product.find({website:'Codechef',topic:'array'});
       res.render("codechef",{product:allProduct,user:req.user})
     })
-    router.get("/string",async(req,res)=>{
-      const allProduct=await Product.find({website:'Codechef',topics:'string'});
+    router.get("/codechef/string",async(req,res)=>{
+      const allProduct=await Product.find({website:'Codechef',topic:'string'});
       res.render("codechef",{product:allProduct,user:req.user})
     })
-    router.get("/sorting",async(req,res)=>{
-      const allProduct=await Product.find({website:'Codechef',topics:'sorting'});
+    router.get("/codechef/sorting",async(req,res)=>{
+      const allProduct=await Product.find({website:'Codechef',topic:'sorting'});
       res.render("codechef",{product:allProduct,user:req.user})
     })
-    router.get("/basic programming",async(req,res)=>{
-      const allProduct=await Product.find({website:'Codechef',topics:'basic programming'});
+    router.get("/codechef/basic programming",async(req,res)=>{
+      const allProduct=await Product.find({website:'Codechef',topic:'basic programming'});
       res.render("codechef",{product:allProduct,user:req.user})
     })
-    router.get("/data structure",async(req,res)=>{
-      const allProduct=await Product.find({website:'Codechef',topics:'data structure'});
+    router.get("/codechef/data structure",async(req,res)=>{
+      const allProduct=await Product.find({website:'Codechef',topic:'data structure'});
       res.render("codechef",{product:allProduct,user:req.user})
     })
-    router.get("/greedy algorithm",async(req,res)=>{
-      const allProduct=await Product.find({website:'Codechef',topics:'greedy algorithm'});
+    router.get("/codechef/greedy algorithm",async(req,res)=>{
+      const allProduct=await Product.find({website:'Codechef',topic:'greedy algorithm'});
       res.render("codechef",{product:allProduct,user:req.user})
     })
-    router.get("/dynamic programming",async(req,res)=>{
-      const allProduct=await Product.find({website:'Codechef',topics:'dynamic programming'});
+    router.get("/codechef/dynamic programming",async(req,res)=>{
+      const allProduct=await Product.find({website:'Codechef',topic:'dynamic programming'});
       res.render("index",{product:allProduct,user:req.user})
     })
     router.get("/leetcode",async (req,res)=>{
