@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <style>
     .select{
     display: inline-block;
@@ -187,20 +188,39 @@ nav{
             background-color: #0a2647;
 
         }
+        .logo img{
+           
+            height:65px;
+            padding-top:10px;
+            padding-right:10px;
+            width:80px;
+           border-radius:50%
+        }
+        .logo {
+            display:flex;
+
+        }
+        .logo a{
+            font-size: 40px;
+            padding-top:10px;
+            font-weight: bold;
+            
+
+        }
         li {
             list-style:none;
         }
-        /* a{
+        a{
             text-decoration: none;
-            color:#fff;
+            color:#020638;
             font-size: 1rem;
         }
         a:hover{
             color:skyblue;
-        } */
+        }
         header{
             position: relative;
-            padding: 0 2rem;
+           height:80px;
             background-color: #144272;
         }
         .navbar {
@@ -212,11 +232,7 @@ nav{
             align-items: center;
             justify-content: space-between;
         }
-        .navbar .logo a{
-            font-size: 3rem;
-            font-weight:bold;
-
-        }
+        
         .navbar .links{
             display: flex;
             gap:2rem;
@@ -255,14 +271,15 @@ nav{
         .action-btn:active {
             scale:0.95;
         }
-        /* .dropdown_menu {
+        .dropdown_menu {
             display:none;
             position:absolute;
             right:2rem;
             top:60px;
             height:0;
             width:300px;
-            
+            background:rgba(255,255,255,0.1);
+
             z-index: 10;
             border-radius:10px;
             overflow:hidden;
@@ -283,7 +300,7 @@ nav{
             display:flex;
             justify-content: center;
         
-        } */
+        }
         .row {
             display:flex;
             justify-content:space-between;
@@ -358,13 +375,100 @@ nav{
                 width:unset;
             }
         }
+        .btn {
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: f;
+ 
+  width:200px;
+height:50px;
+  border-radius: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    background-image:linear-gradient(45deg, #020638,#059083) ;
+    
+    color:white;
+    font-weight: 500;
+   
+}
+.btn:hover{
+  scale:1.15;
+  
+}
+.btm:active{
+  scale:0.85;
+}
+.f{
+  display:flex;
+justify-content: center;
+}
+@media(max-width:576px){
+  .f{
+    display:block;
+  }
+}
+.dropdown_menu a{
+  color:white;
+}
+.navbar a{
+  color:white;
+}
+.table a{
+  color:white;
+}
   </style>
   
 
   </head>
   <body>
-    
-    <div class="flex">
+    <header>
+      <div class="navbar">
+          <div class="logo"><img src="../public/images/WhatsApp Image 2023-07-22 at 11.31.04.jpg "/>
+              <a href="#">CP-PORTAL</a></div>
+          <ul class="links">
+              <li><a href="/dashboard">Home</a></li>
+              <li><a href="/main">Contests</a></li>
+              <li><a href="/learn">Learn</a></li>
+              <li><a href="/problem">Problems</a></li>
+              <li><a href="please<%=user.id%>">To-do</a></li>
+              <li><a href="/profile">Contact Us</a></li>
+          </ul>
+          <div class="mtn">
+          <a href="/logout" class="action-btn">Logout</a>
+          </div>
+          <div>
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small">
+              <li><a class="dropdown-item" href="#">New project...</a></li>
+              <li><a class="dropdown-item" href="#">Name:<%=user.name%></a></li>
+              <li><a class="dropdown-item" href="#">Email id:<%=user.email%></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+          
+         
+          <div class="toggle_btn">
+              <i class="fa-solid fa-bars"></i>
+          </div>
+      </div>
+      <div class="dropdown_menu">
+          <li><a href="/dashboard">Home</a></li>
+              <li><a href="/main">Contests</a></li>
+              <li><a href="/learn">Learn</a></li>
+              <li><a href="/problem">Problems</a></li>
+              <li><a href="/please<%=user.id%>">To-do</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="/logout" class="action-btn">Logout</a></li>
+             
+      </div>
+    </header>
+    <div class="f">
       <div class="s">
         <a href="/codeforces" class="btn btn-primary">CODEFORCES</a>
       </div>
@@ -376,27 +480,9 @@ nav{
         <div class="s">
           <a href="/leetcode" class="btn btn-primary">LEETCODE</a>
         </div>
-        <div class="s">
-          <a href="/leetcode" class="btn btn-primary">HACKERRANK</a>
         </div>
-        <div class="s">
-          <a href="/leetcode" class="btn btn-primary">HACKEREARTH</a>
-        </div>
-      </div>
-      <nav class="navbar bg-body-">
         
-        <div class="container-fluid">
-          <a class="navbar-brand"></a>
-            <button class="btn btn-outline-success" id="myButton" class="float-left submit-button" >Back</button>
-
-              <script type="text/javascript">
-                  document.getElementById("myButton").onclick = function () {
-                      location.href = "/main";
-                  };
-              </script> 
-          
-        </div>
-      </nav>
+      
       <nav class="navbar bg-body-">
         
         <div class="container-fluid">
@@ -414,7 +500,7 @@ nav{
   <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     DIFFICULTY LEVEL
   </button>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu"id="soap">
     <li> <a href="codechef/all">ALL PROBLEMS</a></li>
     <li><a href="codechef/1000">1-1000</a></li>
     <li><a href="codechef/1300">1000-1300</a></li>
@@ -428,11 +514,8 @@ nav{
   </ul>
 </div>
 <div class="btn-group">
-  <button class="btn btn-success btn-lg" type="button">
-  TOPICS
-  </button>
-  <button type="button" class="btn btn-lg btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-    <span class="visually-hidden">Toggle Dropdown</span>
+  <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    TOPICS
   </button>
   <ul class="dropdown-menu">
     <li><a href="codechef/math"    >   MATH      </a></li>
@@ -501,6 +584,19 @@ nav{
 </table>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script>
+          const toggleBtn= document.querySelector('.toggle_btn')
+          const toggleBtnIcon= document.querySelector('.toggle_btn i')
+          const dropDownMenu= document.querySelector('.dropdown_menu')
+          toggleBtn.onclick = function () {
+              dropDownMenu.classList.toggle('open')
+              const isOpen = dropDownMenu.classList.contains('open')
+      
+              toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+          }
+      </script>
         <script>
           const form=document.getElementsByClassName('tick');
           form.addEventListener("submit",function(){
