@@ -32,7 +32,7 @@ router
       .save()
       .then(() => {
         console.log("Successfully added todo!");
-        res.redirect("/main");
+        res.redirect("/problem");
       })
       .catch((err) => console.log(err));
   })

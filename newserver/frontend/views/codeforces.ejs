@@ -423,6 +423,58 @@ btn-group{
   padding-top: 10px;
   margin-top: 20px;
 }
+.dropbtn {
+    background-image:linear-gradient(45deg, #020638,#059083) ;
+  color: white;
+  
+   height:40px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius:12px;
+  font-weight: bolder;
+  
+}
+@media (max-width:576px){
+    .dropbtn{
+        width:50px
+    }
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 
   </style>
   
@@ -442,19 +494,7 @@ btn-group{
               <li><a href="/profile">Contact Us</a></li>
           </ul>
           <div class="mtn">
-          <a href="/logout" class="action-btn">Logout</a>
-          </div>
-          <div>
-          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
-            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-            </a>
-            <ul class="dropdown-menu text-small">
-              <li><a class="dropdown-item" href="#">New project...</a></li>
-              <li><a class="dropdown-item" href="#">Name:<%=user.name%></a></li>
-              <li><a class="dropdown-item" href="#">Email id:<%=user.email%></a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Sign out</a></li>
-            </ul>
+          <a href="/users/logout" class="action-btn">Logout</a>
           </div>
           
          
@@ -469,7 +509,7 @@ btn-group{
               <li><a href="/problem">Problems</a></li>
               <li><a href="/please/<%=user.id%>">To-do</a></li>
               <li><a href="/profile">Contact Us</a></li>
-              <li><a href="/logout" class="action-btn">Logout</a></li>
+              <li><a href="/users/logout" class="action-btn">Logout</a></li>
              
       </div>
     </header>
@@ -571,18 +611,38 @@ btn-group{
   </tbody>
 </table>
         
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-        <script>
-          const form=document.getElementsByClassName('tick');
-          form.addEventListener("submit",function(){
-            const name=product.name;
-            const level=product.level;
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+<script>
+    const toggleBtn= document.querySelector('.toggle_btn')
+    const toggleBtnIcon= document.querySelector('.toggle_btn i')
+    const dropDownMenu= document.querySelector('.dropdown_menu')
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
 
-          })
-          localStorage.setItem('name',name);
-          localStorage.setItem('level',level);
-          window.location.href="to-do.html";
-        </script>
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+   
+function myFunction() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i < dropdowns.length; i++) {
+  var openDropdown = dropdowns[i];
+  if (openDropdown.classList.contains('show')) {
+    openDropdown.classList.remove('show');
+  }
+}
+}
+}
+</script>
       </body>
       
       </html>
