@@ -32,6 +32,597 @@ const seedProducts = [
     // 
    
     Product.insertMany([
+      {
+        name:'Climbing Stairs',
+        link:'https://leetcode.com/problems/climbing-stairs/',
+        level:1,
+        website:'Leetcode',
+        topic:['math','dynamic programming']
+    },
+    {
+        name: 'Gray code',
+        link:'https://leetcode.com/problems/gray-code/',
+        level:2,
+        website:'Leetcode',
+        topic:['math']
+    },
+    {
+        name:'Max points on a line',
+        link:'https://leetcode.com/problems/max-points-on-a-line/',
+        levell:3,
+        website:'Leetcode',
+        topic:['math']
+    },
+    {
+        name:'Happy number',
+        link:'https://leetcode.com/problems/happy-number/',
+        level:1,
+        website:'Leetcode',
+        topic:['math','two pointers']
+    },
+    {
+        name:'Count Primes',
+        link:'https://leetcode.com/problems/count-primes/',
+        level:2,
+        website:'Leetcode',
+        topic:['math']
+    },
+    {
+        name:'Basic calculator',
+        link:'https://leetcode.com/problems/basic-calculator/',
+        level:3,
+        website:'Leetcode',
+        topic:['math']
+    },
+    {
+        name:'Power of two',
+        link:'https://leetcode.com/problems/power-of-two/',
+        level:1,
+        website:'Leetcode',
+        topic:['math']
+    },
+    {
+        name:'Perfect squares',
+        link:'https://leetcode.com/problems/perfect-squares/',
+        level:2,
+        website:'Leetcode',
+        topic:['math']
+    },
+    {
+        name:'Number of digit one',
+        link:'https://leetcode.com/problems/number-of-digit-one/',
+        level:3,
+        website:'Leetcode',
+        topic:['math']
+    },
+    {
+        name:'Search insert position',
+        link:'https://leetcode.com/problems/search-insert-position/',
+        level:1,
+        website:'Leetcode',
+        topic:['binary search']
+    },
+    {
+        name:'Search a 2D matrix',
+        link:'https://leetcode.com/problems/search-a-2d-matrix/',
+        level:2,
+        website:'Leetcode',
+        topic:['binary search']
+    },
+    {
+        name:'Missing number',
+        link:'https://leetcode.com/problems/missing-number/',
+        level:1,
+        website:'Leetcode',
+        topic:['binary search','sorting']
+    },
+    {
+        name:'Find the duplicate number',
+        link:'https://leetcode.com/problems/find-the-duplicate-number/',
+        level:2,
+        website:'Leetcode',
+        topic:['binary search']
+    },
+    {
+        name:'Count of range sum',
+        link:'https://leetcode.com/problems/count-of-range-sum/',
+        level:3,
+        website:'Leetcode',
+        topic:['binary search']
+    },
+    {
+        name:'Valid perfect square',
+        link:'https://leetcode.com/problems/valid-perfect-square/',
+        level:1,
+        website:'Leetcode',
+        topic:['binary search']
+    },
+    {
+        name:'Find right interval',
+        link:'https://leetcode.com/problems/find-right-interval/',
+        level:2,
+        website:'Leetcode',
+        topic:['binary search']
+    },
+    {
+        name:'Reverse pairs',
+        link:'https://leetcode.com/problems/reverse-pairs/',
+        level:3,
+        website:'Leetcode',
+        topic:['binary search']
+    },
+    {
+        name:'Longest palindrome',
+        link:'https://leetcode.com/problems/longest-palindrome/',
+        level:1,
+        website:'Leetcode',
+        topic:['greedy']
+    },
+    {
+        name:'Gas station',
+        link:'https://leetcode.com/problems/gas-station/',
+        level:2,
+        website:'Leetcode',
+        topic:['greedy']
+    },
+    {
+        name:'Candy',
+        link:'https://leetcode.com/problems/candy/',
+        level:3,
+        website:'Leetcode',
+        topic:['greedy']
+    },
+    {
+        name:'Assign cookies',
+        link:'https://leetcode.com/problems/assign-cookies/',
+        level:1,
+        website:'Leetcode',
+        topic:['greedy','sorting','two pointers']
+    },
+    {
+        name:'Largest number',
+        link:'https://leetcode.com/problems/largest-number/',
+        level:2,
+        website:'Leetcode',
+        topic:['greedy','sorting']
+    },
+    {
+        name:'Patching Array',
+        link:'https://leetcode.com/problems/patching-array/',
+        level:3,
+        website:'Leetcode',
+        topic:['greedy']
+    },
+    {
+        name:'Array partition',
+        link:'https://leetcode.com/problems/array-partition/',
+        level:1,
+        website:'Leetcode',
+        topic:['greedy','sorting']
+    },
+    {
+        name:'Boats to save people',
+        link:'https://leetcode.com/problems/boats-to-save-people/',
+        level:2,
+        website:'Leetcode',
+        topic:['greedy']
+    },
+    {
+        name:'Stamping the sequence',
+        link:'https://leetcode.com/problems/stamping-the-sequence/',
+        level:3,
+        website:'Leetcode',
+        topic:['greedy']
+    },
+    {
+        name:'Counting bits',
+        link:'https://leetcode.com/problems/counting-bits/',
+        level:1,
+        website:'Leetcode',
+        topic:['dynamic programming']
+    },
+    {
+        name:'Integer break',
+        link:'https://leetcode.com/problems/integer-break/',
+        level:2,
+        website:'Leetcode',
+        topic:['dynamic programming']
+    },
+    {
+        name:'Scramble string',
+        link:'https://leetcode.com/problems/scramble-string/',
+        level:3,
+        website:'Leetcode',
+        topic:['dynamic programming']
+    },
+    {
+        name:'Is subsequence',
+        link:'https://leetcode.com/problems/is-subsequence/',
+        level:1,
+        website:'Leetcode',
+        topic:['dynamic programming']
+    },
+    {
+        name:'Rotate function',
+        link:'https://leetcode.com/problems/rotate-function/',
+        level:2,
+        website:'Leetcode',
+        topic:['dynamic programming']
+    },
+    {
+        name:'Frog jump',
+        link:'https://leetcode.com/problems/frog-jump/',
+        level:3,
+        website:'Leetcode',
+        topic:['dynamic programming']
+    },
+    {
+        name:'Min cost climbing stairs',
+        link:'https://leetcode.com/problems/min-cost-climbing-stairs/',
+        level:1,
+        website:'Leetcode',
+        topic:['dynamic programming']
+    },
+    {
+        name:'Largest plus sign',
+        link:'https://leetcode.com/problems/largest-plus-sign/',
+        level:2,
+        website:'Leetcode',
+        topic:['dynamic programming']
+    },
+    {
+        name:'Cherry pickup',
+        link:'https://leetcode.com/problems/cherry-pickup/',
+        level:3,
+        website:'Leetcode',
+        topic:['dynamic programming']
+    },
+    {
+        name:'Clone graph',
+        link:'https://leetcode.com/problems/clone-graph/',
+        level:2,
+        website:'Leetcode',
+        topic:['graph']
+    },
+    {
+        name:'Longest increasing path in a matrix',
+        link:'https://leetcode.com/problems/longest-increasing-path-in-a-matrix/',
+        level:3,
+        website:'Leetcode',
+        topic:['graph']
+    },
+    {
+        name:'Evaluate division',
+        link:'https://leetcode.com/problems/evaluate-division/',
+        level:2,
+        website:'Leetcode',
+        topic:['graph']
+    },
+    {
+        name:'Cracking the safe',
+        link:'https://leetcode.com/problems/cracking-the-safe/',
+        level:3,
+        website:'Leetcode',
+        topic:['graph']
+    },
+    {
+        name:'Possible bipartition',
+        link:'https://leetcode.com/problems/possible-bipartition/',
+        level:2,
+        website:'Leetcode',
+        topic:['graph']
+    },
+    {
+        name:'Cat and mouse',
+        link:'https://leetcode.com/problems/cat-and-mouse/',
+        level:3,
+        website:'Leetcode',
+        topic:['graph']
+    },
+    {
+        name:'Find the town judge',
+        link:'https://leetcode.com/problems/find-the-town-judge/',
+        level:1,
+        website:'Leetcode',
+        topic:['graph']
+    },
+    {
+        name:'Find center of star graph',
+        link:'https://leetcode.com/problems/find-center-of-star-graph/',
+        level:1,
+        website:'Leetcode',
+        topic:['graph']
+    },
+    {
+        name:'Find if path exists in graph',
+        link:'https://leetcode.com/problems/find-if-path-exists-in-graph/',
+        level:1,
+        website:'Leetcode',
+        topic:['graph']
+    },
+    {
+        name:'Majority element',
+        link:'https://leetcode.com/problems/majority-element/',
+        level:1,
+        website:'Leetcode',
+        topic:['sorting']
+    },
+    {
+        name:'Sort list',
+        link:'https://leetcode.com/problems/sort-list/',
+        level:2,
+        website:'Leetcode',
+        topic:['sorting','two pointers']
+    },
+    {
+        name:'Maximum gap',
+        link:'https://leetcode.com/problems/maximum-gap/',
+        level:3,
+        website:'Leetcode',
+        topic:['sorting']
+    },
+    {
+        name:'Valid anagram',
+        link:'https://leetcode.com/problems/valid-anagram/',
+        level:1,
+        website:'Leetcode',
+        topic:['sorting']
+    },
+    {
+        name:'H-index',
+        link:'https://leetcode.com/problems/h-index/',
+        level:2,
+        website:'Leetcode',
+        topic:['sorting']
+    },
+    {
+        name:'Find median from data stream',
+        link:'https://leetcode.com/problems/find-median-from-data-stream/',
+        level:3,
+        website:'Leetcode',
+        topic:['sorting']
+    },
+    {
+        name:'Find the difference',
+        link:'https://leetcode.com/problems/find-the-difference/',
+        level:1,
+        website:'Leetcode',
+        topic:['sorting']
+    },
+    {
+        name:'Maximum ice cream bars',
+        link:'https://leetcode.com/problems/maximum-ice-cream-bars/',
+        level:2,
+        website:'Leetcode',
+        topic:['sorting']
+    },
+    {
+        name:'Closest room',
+        link:'https://leetcode.com/problems/closest-room/',
+        level:3,
+        website:'Leetcode',
+        topic:['sorting']
+    },
+    {
+        name:'Lexicographically smallest pallindrome',
+        link:'https://leetcode.com/problems/lexicographically-smallest-palindrome/',
+        level:1,
+        website:'Leetcode',
+        topic:['two pointers']
+    },
+    {
+        name:'Find the maximum number of marked indices',
+        link:'https://leetcode.com/problems/find-the-maximum-number-of-marked-indices/',
+        level:2,
+        website:'Leetcode',
+        topic:['two pointers']
+    },
+    {
+        name:'Subsequence with the minimum score',
+        link:'https://leetcode.com/problems/subsequence-with-the-minimum-score/',
+        level:3,
+        website:'Leetcode',
+        topic:['two pointers']
+    },
+    {
+        name:'Minimum common value',
+        link:'https://leetcode.com/problems/minimum-common-value/',
+        level:1,
+        website:'Leetcode',
+        topic:['two pointers']
+    },
+    {
+        name:'Maximum total beauty of the gardens',
+        link:'https://leetcode.com/problems/maximum-total-beauty-of-the-gardens/',
+        level:3,
+        website:'Leetcode',
+        topic:['two pointers']
+    },
+    {
+        name:'Number of distinct averages',
+        link:'https://leetcode.com/problems/number-of-distinct-averages/',
+        level:1,
+        website:'Leetcode',
+        topic:['two pointers']
+    },
+    {
+        name:'Rotating the box',
+        link:'https://leetcode.com/problems/rotating-the-box/',
+        level:2,
+        website:'Leetcode',
+        topic:['two pointers']
+    },
+    {
+        name:'Largest merge of two strings',
+        link:'https://leetcode.com/problems/largest-merge-of-two-strings/',
+        level:2,
+        website:'Leetcode',
+        topic:['two pointers']
+    },
+    {
+        name:'Trapping rain water',
+        link:'https://leetcode.com/problems/trapping-rain-water/',
+        level:3,
+        website:'Leetcode',
+        topic:['two pointers']
+    },
+    {
+        name:'Find pivot index',
+        link:'https://leetcode.com/problems/find-pivot-index/',
+        level:1,
+        website:'Leetcode',
+        topic:['prefix sum']
+    },
+    {
+        name:'Contiguous Array',
+        link:'https://leetcode.com/problems/contiguous-array/',
+        level:2,
+        website:'Leetcode',
+        topic:['prefix sum']
+    },
+    {
+        name:'Split array largest sum',
+        link:'https://leetcode.com/problems/split-array-largest-sum/',
+        level:3,
+        website:'Leetcode',
+        topic:['prefix sum']
+    },
+    {
+        name:'Minimum value to get positive step by step sum',
+        link:'https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum/',
+        level:1,
+        website:'Leetcode',
+        topic:['prefix sum']
+    },
+    {
+        name:'XOR queries of a subarray',
+        link:'https://leetcode.com/problems/xor-queries-of-a-subarray/',
+        level:2,
+        website:'Leetcode',
+        topic:['prefix sum']
+    },
+    {
+        name:'Sum of floored pairs',
+        link:'https://leetcode.com/problems/sum-of-floored-pairs/',
+        level:3,
+        website:'Leetcode',
+        topic:['prefix sum']
+    },
+    {
+        name:'Find the middle index in array',
+        link:'https://leetcode.com/problems/find-the-middle-index-in-array/',
+        level:1,
+        website:'Leetcode',
+        topic:['prefix sum']
+    },
+    {
+        name:'Describe the painting',
+        link:'https://leetcode.com/problems/describe-the-painting/',
+        level:2,
+        website:'Leetcode',
+        topic:['prefix sum']
+    },
+    {
+        name:'Minimum space wasted from packaging',
+        link:'https://leetcode.com/problems/minimum-space-wasted-from-packaging/',
+        level:3,
+        website:'Leetcode',
+        topic:['prefix sum']
+    },
+
+      {
+    
+            name: 'Advantage',
+            link: 'https://codeforces.com/problemset/problem/1760/C',
+            level: 800,
+            website: 'Codeforces',
+            topic: [ 'data_structures', 'implementation', 'sortings' ],
+            
+          },
+          {
+           
+            name: "I'm bored with life",
+            link: 'https://codeforces.com/problemset/problem/822/A',
+            level: 800,
+            website: 'Codeforces',
+            topic: [ 'implementation', 'math', 'number_theory' ],
+            
+          },
+          {
+            
+            name: 'The Cake Is a Lie',
+            link: 'https://codeforces.com/problemset/problem/1519/B',
+            level: 800,
+            website: 'Codeforces',
+            topic: [ 'dp', 'math' ],
+            
+          },
+          {
+            
+            name: 'Anton and Digits',
+            link: 'https://codeforces.com/problemset/problem/734/B',
+            level: 800,
+            website: 'Codeforces',
+            topic: [ 'greedy', 'implementation', 'math' ],
+            
+          },
+          {
+            name: 'Two Sum',
+            link: 'https://leetcode.com/problems/two-sum/',
+            level: 1,
+            website: 'Leetcode',
+            topic: ['array']
+        },
+        {
+            name:'Median of two sorted arrays',
+            link:'https://leetcode.com/problems/median-of-two-sorted-arrays/',
+            level: 3,
+            website: 'Leetcode',
+            topic:['array','binary search']
+        },
+        {
+            name:'Container with most water',
+            link:'https://leetcode.com/problems/container-with-most-water/',
+            level: 2,
+            website:'Leetcode',
+            topic:['array','greedy','two pointers']
+        },
+      {
+    
+        name: 'Advantage',
+        link: 'https://codeforces.com/problemset/problem/1760/C',
+        level: 800,
+        website: 'Codeforces',
+        topic: [ 'data_structures', 'implementation', 'sortings' ],
+        
+      },
+      {
+       
+        name: "I'm bored with life",
+        link: 'https://codeforces.com/problemset/problem/822/A',
+        level: 800,
+        website: 'Codeforces',
+        topic: [ 'implementation', 'math', 'number_theory' ],
+        
+      },
+      {
+        
+        name: 'The Cake Is a Lie',
+        link: 'https://codeforces.com/problemset/problem/1519/B',
+        level: 800,
+        website: 'Codeforces',
+        topic: [ 'dp', 'math' ],
+        
+      },
+      {
+        
+        name: 'Anton and Digits',
+        link: 'https://codeforces.com/problemset/problem/734/B',
+        level: 800,
+        website: 'Codeforces',
+        topic: [ 'greedy', 'implementation', 'math' ],
+        
+      },
         {
     
             name: 'Advantage',
@@ -226,7 +817,197 @@ const seedProducts = [
         { name:'Children trips',link:'https://www.codechef.com/problems/TRIPS',level:2899,website:'Codechef',topic:['graph'] },
         { name:'Tree',link:'https://www.codechef.com/problems/RRTREE',level:2936,website:'Codechef',topic:['segment trees'] },
         { name:'Chef and divisors',link:'https://www.codechef.com/problems/DIVISOR',level:2932,website:'Codechef',topic:['basic programming'] },
+        {
+    
+            name: 'A and B and Compilation Errors',
+            link: 'https://codeforces.com/problemset/problem/519/B',
+            level: 1100,
+            website: 'Codeforces',
+            topic: [ 'data_structures', 'implementation', 'sortings' ],
+            
+          },
+          {
+           
+            name: 'Laptops',
+            link: 'https://codeforces.com/problemset/problem/456/A',
+            level: 1100,
+            website: 'Codeforces',
+            topic: [ 'sortings' ],
+            
+          },
+          {
+           
+            name: 'Sum of Odd Integers',
+            link: 'https://codeforces.com/problemset/problem/1327/A',
+            level: 1100,
+            website: 'Codeforces',
+            topic: [ 'math' ],
+           
+          },
+          {
+            
+            name: 'Long Jumps',
+            link: 'https://codeforces.com/problemset/problem/1472/C',
+            level: 1100,
+            website: 'Codeforces',
+            topic: [ 'dp', 'graphs' ],
+           
+          },
+          {
+            
+            name: 'Minor Reductions',
+            link: 'https://codeforces.com/problemset/problem/1626/B',
+            level: 1100,
+            website: 'Codeforces',
+            topic: [ 'greedy', 'strings' ],
+            
+          },
+          {
+            
+            name: 'Max and Mex',
+            link: 'https://codeforces.com/problemset/problem/1496/B',
+            level: 1100,
+            website: 'Codeforces',
+            topic: [ 'math' ],
+            
+          },
+          {
+          
+            name: 'Reachable Numbers',
+            link: 'https://codeforces.com/problemset/problem/1157/A',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'implementation' ],
+           
+          },
+          {
+            
+            name: 'Infinite Sequence',
+            link: 'https://codeforces.com/problemset/problem/675/A',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'math' ],
+            
+          },
         
+        
+          {
+           
+            name: 'Equidistant String',
+            link: 'https://codeforces.com/problemset/problem/545/B',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'greedy' ],
+           
+          },
+          {
+           
+            name: 'The Great Julya Calendar',
+            link: 'https://codeforces.com/problemset/problem/331/C1',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'dp' ],
+           
+          },
+          {
+           
+            name: 'Substrings Sort',
+            link: 'https://codeforces.com/problemset/problem/988/B',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'sortings', 'strings' ],
+            
+          },
+          {
+           
+            name: 'Letter',
+            link: 'https://codeforces.com/problemset/problem/43/B',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'implementation', 'strings' ],
+           
+          },
+          {
+           
+            name: 'Number Circle',
+            link: 'https://codeforces.com/problemset/problem/1189/B',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'greedy', 'math', 'sortings' ],
+            
+          },
+          {
+           
+            name: 'Less or Equal',
+            link: 'https://codeforces.com/problemset/problem/977/C',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'sortings' ],
+           
+          },
+          {
+           
+            name: 'Make it good',
+            link: 'https://codeforces.com/problemset/problem/1385/C',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'greedy' ],
+           
+          },
+          {
+            
+            name: 'Poisoned Dagger',
+            link: 'https://codeforces.com/problemset/problem/1613/C',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'binary_search' ],
+            
+          },
+          {
+            
+            name: 'Magical Calendar',
+            link: 'https://codeforces.com/problemset/problem/1371/B',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'math' ],
+            
+          },
+          {
+            
+            name: 'Creating the Contest',
+            link: 'https://codeforces.com/problemset/problem/1029/B',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'dp', 'greedy', 'math' ],
+            
+          },
+          {
+           
+            name: 'Simple Molecules',
+            link: 'https://codeforces.com/problemset/problem/344/B',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'graphs', 'math' ],
+           
+          },
+          {
+           
+            name: 'Phone Numbers',
+            link: 'https://codeforces.com/problemset/problem/151/B',
+            level: 1200,
+            website: 'Codeforces',
+            topic: [ 'strings' ],
+            
+          },
+          {
+            
+            name: 'Alice,Bob and Candies',
+            link: 'https://codeforces.com/problemset/problem/1352/D',
+            level: 1300,
+            website: 'Codeforces',
+            topic: [ 'implementation' ],
+           
+          }
 
         
         

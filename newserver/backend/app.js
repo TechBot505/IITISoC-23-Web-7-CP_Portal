@@ -35,7 +35,6 @@ mongoose.connect(url,connection)
     console.log("err",e);
 });
 
-
 app.set('views', path.join(__dirname, '../frontend/views'))
 
 app.set('views', path.join(__dirname, '../frontend/views')); 

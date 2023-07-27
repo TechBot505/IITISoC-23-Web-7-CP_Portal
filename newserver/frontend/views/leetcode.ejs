@@ -21,7 +21,11 @@
    
   }
 
- 
+  body{
+   
+    background: radial-gradient(rgb(3, 7, 146),rgb(22,23,35));
+    
+  }
   .s button {
     background-color: white;
    border-color: white;
@@ -175,212 +179,56 @@ nav{
     transform: rotate(35deg);
   }
 }
-*{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-        }
-        body {
-            height:100vh;
-            background-color: #0a2647;
-
-        }
-        li {
-            list-style:none;
-        }
-        /* a{
-            text-decoration: none;
-            color:#fff;
-            font-size: 1rem;
-        }
-        a:hover{
-            color:skyblue;
-        } */
-        header{
-            position: relative;
-            padding: 0 2rem;
-            background-color: #144272;
-        }
-        .navbar {
-            width:100%;
-            height:60px;
-            max-width: 1200px;
-            margin:0 auto;
-            display:flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .navbar .logo a{
-            font-size: 3rem;
-            font-weight:bold;
-
-        }
-        .navbar .links{
-            display: flex;
-            gap:2rem;
-        }
-        ul li a{
-            font-size:1.5rem;
-        }
-        .navbar .toggle_btn {
-            color:#fff;
-            font-size:2rem;
-            cursor:pointer;
-            display:none;
-        }
-        .btn {
-            display:flex;
-            justify-content: space-around;
-        }
-        .action-btn{
-            font-size: 1.5rem;
-            background-color: #39b5e0;
-            color:#fff;
-            padding:0.5rem 1rem;
-            margin-right:5px;
-            border:none;
-            outline:none;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            cursor:pointer;
-            transition: scale 0.2 ease;
-        }
-        .action-btn:hover{
-            scale:1.05;
-            color:#fff;
-        }
-        .action-btn:active {
-            scale:0.95;
-        }
-        /* .dropdown_menu {
-            display:none;
-            position:absolute;
-            right:2rem;
-            top:60px;
-            height:0;
-            width:300px;
-            
-            z-index: 10;
-            border-radius:10px;
-            overflow:hidden;
-            transition:height cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .dropdown_menu.open{
-            height:370px;
-        }
-        .dropdown_menu li{
-            padding:0.7rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-        .dropdown_menu .action-btn{
-            width:100%;
-            display:flex;
-            justify-content: center;
-        
-        } */
-        .row {
-            display:flex;
-            justify-content:space-between;
-            align-items: center;
-            margin:100px 0;
-        }
-        .col-1 {
-            flex-basis:40%;
-            position:relative;
-            margin-left:50px;
-        }
-        .col-1 h1{
-            font-size: 54px;
-            color:#39b5e0;
-
-        }
-        .col-1 p{
-            font-size:24px;
-            color:#fff;
-            font-weight: 100;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 30px 0;
-       
-        }
-        .col-2{
-            margin-right: 10%;
-        }
-        img {
-            width:90%;
-        }
-        
-         @media only screen and (max-width: 700px){
-            .navbar .links,
-            .navbar .action-btn{
-                display:none;
-            }
-            .navbar .toggle_btn{
-                display:block;
-        
-            }
-            .dropdown_menu{
-                display:block;
-            }
-            .row {
-                flex-direction:column-reverse;
-                margin: 50px 0;
-            }
-            .col-2 {
-                flex-basis:100%;
-                margin-bottom:50px;
-
-            }
-            .col-2 img{
-                width:78%;
-                padding-left: 20%;
-
-            }
-            .col-1{
-                flex-basis:100%;
-
-            }
-            .col-1 h1{
-                font-size: 35px;
-            }
-            .col-1 p{
-                font-size:18px;
-            }
-            }
-        @media (max-width: 576px) {
-            .dropdown_menu {
-                left:2rem;
-                width:unset;
-            }
-        }
   </style>
   
 
   </head>
   <body>
-    
-    <div class="flex">
-      <div class="s">
-        <a href="/codeforces" class="btn btn-primary">CODEFORCES</a>
+    <header class="py-3 mb-4 border-bottom" data-bs-theme="dark">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">HERE,OUR LOGO!</span>
+        </a>
+        <div class="dropdown text-end" data-bs-theme="dark">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Name:<%=user.name%></a></li>
+            <li><a class="dropdown-item" href="#">Email id:<%=user.email%></a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
       </div>
-        <div class="s">
-          
-            <a href="/codechef" class="btn btn-primary">CODECHEF</a>
-     
+    </header>
+    <div class="flex">
+        <div class="s" >
+          <button class="button">
+          <a href="/codeforces">CODEFORCES</a>
+      </button>
         </div>
         <div class="s">
-          <a href="/leetcode" class="btn btn-primary">LEETCODE</a>
+          <button>
+            <a href="/codechef">CODECHEF</a>
+      </button>
         </div>
         <div class="s">
-          <a href="/leetcode" class="btn btn-primary">HACKERRANK</a>
+          <button>
+            <a href="/leetcode">LEETCODE</a>
+      </button>
         </div>
         <div class="s">
-          <a href="/leetcode" class="btn btn-primary">HACKEREARTH</a>
+          <button>
+          <img class="select"src="https://www.krammerliu.com/images/post/leetcode.jpeg"/>
+      </button>
+        </div>
+        <div class="s">
+          <button>
+          <img class="select"src="https://th.bing.com/th/id/R.94ebf80b695ec938e0c1b05e61cde139?rik=YvFor%2fRsidwTZg&riu=http%3a%2f%2fblog.himanshusheth.net%2fwp-content%2fuploads%2f2017%2f08%2fhackerearth-logo.jpg&ehk=ZJKscHR6ybWk5%2b5L7PB4J2Wb%2falTLR48fSncS5ygnT8%3d&risl=&pid=ImgRaw&r=0"/>
+      </button>
         </div>
       </div>
       <nav class="navbar bg-body-">
@@ -415,38 +263,31 @@ nav{
     DIFFICULTY LEVEL
   </button>
   <ul class="dropdown-menu">
-    <li> <a href="codechef/all">ALL PROBLEMS</a></li>
-    <li><a href="codechef/1000">1-1000</a></li>
-    <li><a href="codechef/1300">1000-1300</a></li>
-    <li><a href="codechef/1600">1300-1600</a></li>
-    <li><a href="codechef/1900">1600-1900</a></li>
-    <li><a href="codechef/2200">1900-2200</a></li>
-    <li><a href="codechef/2500">2200-2500</a></li>
-    <li><a href="codechef/5000">2500-5000</a></li>
-    
-    <li><a href="/products">1300-1600</a></li>
+    <li> <a href="/leetcode/all">ALL PROBLEMS</a></li>
+    <li><a href="/leetcode/1">1</a></li>
+    <li><a href="/leetcode/2">2</a></li>
+    <li><a href="/leetcode/3">3</a></li>
   </ul>
 </div>
 <div class="btn-group">
   <button class="btn btn-success btn-lg" type="button">
-  TOPICS
+    <%=user.id%>
   </button>
   <button type="button" class="btn btn-lg btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
-    <li><a href="codechef/math"    >   MATH      </a></li>
-    <li><a href="codechef/array"   >   ARRAYS      </a></li>
-    <li><a href="codechef/binary search"  >   BINARY SEARCH       </a></li>
-    <li><a href="codechef/string"     >   STRINGS             </a></li>
-    <li><a href="codechef/greedy algorithm"  >   GREEDY ALGORITHMS   </a></li>
-    <li><a href="codechef/dynamic programming"      >   DYNAMIC PROGRAMMING </a></li>
-    <li><a href="codechef/graph"   >   GRAPHS              </a></li>
-    <li><a href="codechef/sorting" >   SORTING             </a></li>
-    <li><a href="codechef/data structure"    >   DATA STRUCTURES     </a></li>
-    <li><a href="codechef/segment trees"    >   TREES               </a></li>
-    <li><a href="codechef/basic programming"    >   BASIC PROGRAMMING             </a></li>
-
+    <li><a href="/leetcode/math"    >   MATH      </a></li>
+    <li><a href="/leetcode/array"   >   ARRAYS      </a></li>
+    <li><a href="/leetcode/binary"  >   BINARY SEARCH       </a></li>
+    <li><a href="/leetcode/string"     >   STRINGS             </a></li>
+    <li><a href="/leetcode/greedy"  >   GREEDY ALGORITHMS   </a></li>
+    <li><a href="/leetcode/dynamic"      >   DYNAMIC PROGRAMMING </a></li>
+    <li><a href="/leetcode/graph"   >   GRAPHS              </a></li>
+    <li><a href="/leetcode/sorting" >   SORTING             </a></li>
+    <li><a href="/leetcode/prefix"    >   PREFIX SUM     </a></li>
+    <li><a href="/leetcode/two"    >   TWO POINTERS               </a></li>
+    
   </ul>
 </div>
 <table class="table" data-bs-theme="dark">
