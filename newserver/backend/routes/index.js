@@ -105,31 +105,31 @@ router.get("/problem", async(req, res) => {
       const allProduct = await Product.find({name:new RegExp(search, 'i')});
       res.render("index",{product: allProduct});
     })
-    router.get("codechef/all",async(req,res)=>{
+    router.get("/all",async(req,res)=>{
       const allProduct = await Product.find({});
       res.render("index",{product: allProduct,user:req.user});
     })
-    router.get("codechef/1000",async(req,res)=>{
+    router.get("/1000",async(req,res)=>{
       const allProduct = await Product.find({ level:{$lte:1000} })
           res.render("index", {product: allProduct,user:req.user })
     })
-    router.get("codechef/1300",async(req,res)=>{
+    router.get("/1300",async(req,res)=>{
       const allProduct = await Product.find({ level:{$lte:1300,$gte:1000} })
           res.render("index", {product: allProduct,user:req.user })
     })
-    router.get("codechef/1600",async(req,res)=>{
+    router.get("/1600",async(req,res)=>{
       const allProduct = await Product.find({ level:{$lte:1600,$gte:1300} })
           res.render("index", {product: allProduct,user:req.user })
     })
-    router.get("codechef/1900",async(req,res)=>{
+    router.get("/1900",async(req,res)=>{
       const allProduct = await Product.find({ level:{$lte:1900,$gte:1600} })
           res.render("index", {product: allProduct,user:req.user })
     })
-    router.get("codechef/2200",async(req,res)=>{
+    router.get("/2200",async(req,res)=>{
       const allProduct = await Product.find({ level:{$lte:2200,$gte:1900} })
           res.render("index", {product: allProduct,user:req.user })
     })
-    router.get("codechef/2500",async(req,res)=>{
+    router.get("/2500",async(req,res)=>{
       const allProduct = await Product.find({ level:{$lte:2500,$gte:2200} })
           res.render("index", {product: allProduct,user:req.user })
     })
@@ -169,31 +169,31 @@ router.get("/problem", async(req, res) => {
       const allProduct = await Product.find({website:'Codechef'});
       res.render("codechef",{product: allProduct,user:req.user});
     })
-    router.get("/all",async(req,res)=>{
+    router.get("/codechef/all",async(req,res)=>{
       const allProduct = await Product.find({website:'Codechef'});
       res.render("codechef",{product: allProduct,user:req.user});
     })
-    router.get("/1000",async(req,res)=>{
+    router.get("/codechef/1000",async(req,res)=>{
       const allProduct = await Product.find({ website:'Codechef',level:{$lte:1000} })
           res.render("codechef", {product: allProduct,user:req.user })
     })
-    router.get("/1300",async(req,res)=>{
+    router.get("/codechef/1300",async(req,res)=>{
       const allProduct = await Product.find({ website:'Codechef',level:{$lte:1300,$gte:1000} })
           res.render("codechef", {product: allProduct,user:req.user })
     })
-    router.get("/1600",async(req,res)=>{
+    router.get("/codechef/1600",async(req,res)=>{
       const allProduct = await Product.find({ website:'Codechef',level:{$lte:1600,$gte:1300} })
           res.render("codechef", {product: allProduct,user:req.user })
     })
-    router.get("/1900",async(req,res)=>{
+    router.get("/codechef/1900",async(req,res)=>{
       const allProduct = await Product.find({ website:'Codechef',level:{$lte:1900,$gte:1600} })
           res.render("codechef", {product: allProduct,user:req.user })
     })
-    router.get("/2200",async(req,res)=>{
+    router.get("/codechef/2200",async(req,res)=>{
       const allProduct = await Product.find({website:'Codechef', level:{$lte:2200,$gte:1900} })
           res.render("codechef", {product: allProduct,user:req.user })
     })
-    router.get("/2500",async(req,res)=>{
+    router.get("/codechef/2500",async(req,res)=>{
       const allProduct = await Product.find({ website:'Codechef',level:{$lte:2500,$gte:2200} })
           res.render("codechef", {product: allProduct,user:req.user })
     })

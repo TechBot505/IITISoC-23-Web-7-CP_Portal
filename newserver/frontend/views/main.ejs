@@ -691,7 +691,7 @@
             <li><a href="/profile">Contact Us</a></li>
         </ul>
         <div class="mtn">
-        <a href="/logout" class="action-btn">Logout</a>
+        <a href="/users/logout" class="action-btn">Logout</a>
         </div>
         <div>
         <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
@@ -706,7 +706,6 @@
           </ul>
         </div>
         
-       
         <div class="toggle_btn">
             <i class="fa-solid fa-bars"></i>
         </div>
@@ -718,7 +717,7 @@
             <li><a href="/problem">Problems</a></li>
             <li><a href="/please<%=user.id%>">To-do</a></li>
             <li><a href="/profile">Contact Us</a></li>
-            <li><a href="/logout" class="action-btn">Logout</a></li>
+            <li><a href="/users/logout" class="action-btn">Logout</a></li>
            
     </div>
   </header>
@@ -773,6 +772,28 @@
                ? 'fa-solid fa-xmark'
                : 'fa-solid fa-bars'
            }
+   </script>
+  
+   <script>
+       
+      
+function myFunction() {
+ document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+ if (!event.target.matches('.dropbtn')) {
+   var dropdowns = document.getElementsByClassName("dropdown-content");
+   var i;
+   for (i = 0; i < dropdowns.length; i++) {
+     var openDropdown = dropdowns[i];
+     if (openDropdown.classList.contains('show')) {
+       openDropdown.classList.remove('show');
+     }
+   }
+ }
+}
    </script>
     <script>
         const api = "https://kontests.net/api/v1";

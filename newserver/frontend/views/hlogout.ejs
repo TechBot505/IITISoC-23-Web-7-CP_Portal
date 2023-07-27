@@ -301,7 +301,7 @@
             </ul>
             
             <div class="btn">
-            <a href="/logout" class="action-btn">Logout</a>
+            <a href="/users/logout" class="action-btn">Logout</a>
             
             <div class="dropdown-menu">
                 <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
@@ -337,7 +337,7 @@
                 <li><a href="/problem">Problems</a></li>
                 <li><a href="/please/<%=user.id%>">To-do</a></li>
                 <li><a href="/profile">Help</a></li>
-                <li><a href="/logout" class="action-btn">Logout</a></li>
+                <li><a href="/users/logout" class="action-btn">Logout</a></li>
                
         </div>
     </header>
@@ -352,6 +352,7 @@
             </div>
         </div>
     </main>
+  
     <script>
         const toggleBtn= document.querySelector('.toggle_btn')
         const toggleBtnIcon= document.querySelector('.toggle_btn i')
