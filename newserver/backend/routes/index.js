@@ -384,7 +384,7 @@ router.get("/problem", async(req, res) => {
       res.render("learn.ejs",{user:req.user})
     })
   router.get("/profile",async(req,res)=>{
-    res.render("profile.ejs");
+    res.render("profile.ejs",{user:req.user});
   })
   
 

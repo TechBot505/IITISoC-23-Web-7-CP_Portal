@@ -469,7 +469,7 @@ btn-group{
               <li><a href="/learn">Learn</a></li>
               <li><a href="/problem">Problems</a></li>
               <li><a href="/please/<%=user.id%>">To-do</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/profile">Contact Us</a></li>
               <li><a href="/logout" class="action-btn">Logout</a></li>
              
       </div>
@@ -489,16 +489,7 @@ btn-group{
         </div>
         
       
-      <nav class="navbar bg-body-">
-        
-        <div class="container-fluid">
-            <a class="navbar-brand"></a>
-            <form class="d-flex" role="search" method="post">
-              <input class="form-control me-2"  type="text" name="search" placeholder="Search PROBLEMS" aria-label="Search ">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-              </div>
-      </nav>
+      
       
       
       
@@ -515,11 +506,8 @@ btn-group{
   </ul>
 </div>
 <div class="btn-group">
-  <button class="btn btn-success btn-lg" type="button">
-    <%=user.id%>
-  </button>
-  <button type="button" class="btn btn-lg btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-    <span class="visually-hidden">Toggle Dropdown</span>
+  <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    TOPICS
   </button>
   <ul class="dropdown-menu">
     <li><a href="/leetcode/math"    >   MATH      </a></li>
@@ -543,7 +531,7 @@ btn-group{
       <th scope="col">RATING</th>
       <th scope="col">WEBSITE</th>
       <th scope="col">TO-DO LIST</th>
-      <th scope="col">FAV</th>
+      
     </tr>
   </thead>
 
@@ -572,10 +560,7 @@ btn-group{
                 
            
           </td>
-          <td>
-          <input type="checkbox" id="username" placeholder="username" name="username" value="<%=product.name%>">
-
-              </input></td>
+          
 
               
       </tr>
