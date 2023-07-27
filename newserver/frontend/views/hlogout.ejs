@@ -289,15 +289,15 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><img src="../public/images/WhatsApp Image 2023-07-22 at 11.31.04.jpg "/>
+            <div class="logo"><img src="https://i.imgur.com/snfPYKq.jpg"/>
                 <a href="#">CP-PORTAL</a></div>
             <ul class="links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Contests</a></li>
-                <li><a href="#">Learn</a></li>
-                <li><a href="#">Problems</a></li>
-                <li><a href="#">To-do</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/main">Contests</a></li>
+                <li><a href="/learn">Learn</a></li>
+                <li><a href="/problem">Problems</a></li>
+                <li><a href="/tplease<%=user.id%>">To-do</a></li>
+                <li><a href="/profile">Contact Us</a></li>
             </ul>
             
             <div class="btn">
@@ -332,11 +332,11 @@
         </div>
         <div class="dropdown_menu">
             <li><a href="#">Home</a></li>
-                <li><a href="#">Contests</a></li>
-                <li><a href="#">Learn</a></li>
-                <li><a href="#">Problems</a></li>
-                <li><a href="#">To-do</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="/main">Contests</a></li>
+                <li><a href="/learn">Learn</a></li>
+                <li><a href="/problem">Problems</a></li>
+                <li><a href="/please<%=user.id%>">To-do</a></li>
+                <li><a href="/profile">Help</a></li>
                 <li><a href="/logout" class="action-btn">Logout</a></li>
                
         </div>
@@ -348,7 +348,7 @@
             <p class="par">You will be able to get notifications of the<br>upcoming contests from multiple<br>coding platforms.</p>
            </div>
             <div class="col-2">
-                <img src="../public/images/coding.jpg">
+                <img src="https://i.imgur.com/AnQM04V.jpg">
             </div>
         </div>
     </main>
