@@ -42,7 +42,7 @@
     }
     
 }
-div#main-card {
+div.main-card {
     width:400 px;
     margin-right: 30px;
     box-shadow: -5px 2px 18px 4px #020638;;
@@ -201,12 +201,23 @@ div#main-card:hover {
 
         }
         .logo a{
-            font-size: 40px;
-            padding-top:10px;
-            font-weight: bold;
-            
+        padding-bottom: 10px;
+           font-size: 3rem;
+           font-weight: bold;
+          
+           
 
-        }
+       }
+       @media(max-width:576px){
+        .logo a{
+        padding-top: 20px;
+           font-size: 20px;
+           font-weight:bold;
+          
+           
+
+       }
+    }
         li {
             list-style:none;
         }
@@ -459,17 +470,7 @@ div#main-card:hover {
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Sign out</a></li>
                       </ul></div>
-                    <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">
-                   My Account
-                   
-                </button>
-                <div id="myDropdown" class="dropdown-content">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Name:<%=user.name%></a></li>
-                    <li><a class="dropdown-item" href="#">Email id:<%=user.email%></a></li>
-                    <li><hr class="dropdown-divider"></li>
-                </div>
+                    
                    
                     <div class="toggle_btn">
                         <i class="fa-solid fa-bars"></i>
@@ -488,7 +489,7 @@ div#main-card:hover {
               </header>
     </div>
         <div class="flex">
-        <div id="main-card">
+        <div class="main-card">
             <div class="cover-photo"></div>
             <div class="photo">
                 
@@ -521,7 +522,7 @@ div#main-card:hover {
                 </ul>
             </div>
         </div>
-        <div id="main-card">
+        <div class="main-card">
             <div class="cover-photo"></div>
             <div class="photo">
                 <img src="" alt="">
@@ -554,7 +555,7 @@ div#main-card:hover {
                 </ul>
             </div>
         </div>
-        <div id="main-card">
+        <div class="main-card">
             <div class="cover-photo"></div>
             <div class="photo">
                 

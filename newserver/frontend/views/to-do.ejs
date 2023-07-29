@@ -232,12 +232,24 @@ nav{
 
         }
         .logo a{
-            font-size: 40px;
-            padding-top:10px;
-            font-weight: bold;
-            
+        padding-bottom: 10px;
+           font-size: 3rem;
+           font-weight: bold;
+           
+          
+           
 
-        }
+       }
+       @media(max-width:576px){
+        .logo a{
+        padding-top: 20px;
+           font-size: 20px;
+           font-weight: bold;
+          
+           
+
+       }
+       }
         li {
             list-style:none;
         }
@@ -517,6 +529,15 @@ nav{
 <table class="table" data-bs-theme="dark">
   <thead>
     
+      <tr>
+        <th scope="col">PROBLEMS</th>
+        <th scope="col">TOPICS</th>
+        <th scope="col">RATING</th>
+        <th scope="col">WEBSITE</th>
+        
+       
+      </tr>
+    
   </thead>
 
   <tbody>
@@ -527,6 +548,8 @@ nav{
           <td><a href=<%=todu.link%>><%= todu.name%></a></td>  
           <td><%= todu.topic %> </td>
           <td><%= todu.level %> </td>
+          <td><%= todu.website %> </td>
+
           <!-- <td><input type="checkbox" id="username" placeholder="username" name="username" value="copyright">
           </td> -->
           

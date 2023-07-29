@@ -361,7 +361,7 @@
             justify-content: space-between;
         }
         .navbar .logo a{
-            font-size: 3rem;
+           
             font-weight:bold;
 
         }
@@ -499,12 +499,23 @@
 
         }
         .logo a{
-            font-size: 40px;
-            
-            font-weight: bold;
-            
+        padding-bottom: 10px;
+           font-size: 3rem;
+           
+          
+           
 
-        }
+       }
+       @media(max-width:576px){
+        .logo a{
+        padding-top: 20px;
+           font-size: 20px;
+           
+          
+           
+
+       }
+       }
         li {
             list-style:none;
         }
@@ -687,7 +698,7 @@
             <li><a href="/main">Contests</a></li>
             <li><a href="/learn">Learn</a></li>
             <li><a href="/problem">Problems</a></li>
-            <li><a href="please<%=user.id%>">To-do</a></li>
+            <li><a href="please/<%=user.id%>">To-do</a></li>
             <li><a href="/profile">Contact Us</a></li>
         </ul>
         <div class="mtn">
@@ -715,7 +726,7 @@
             <li><a href="/main">Contests</a></li>
             <li><a href="/learn">Learn</a></li>
             <li><a href="/problem">Problems</a></li>
-            <li><a href="/please<%=user.id%>">To-do</a></li>
+            <li><a href="/please/<%=user.id%>">To-do</a></li>
             <li><a href="/profile">Contact Us</a></li>
             <li><a href="/users/logout" class="action-btn">Logout</a></li>
            
