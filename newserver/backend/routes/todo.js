@@ -6,8 +6,8 @@ router.post('/add/todo/:id', async (req, res) => {
   const { id } = req.params;
   const user = await User.findById(id).populate('user','todus');
   console.log(user);
-  const { todo,fodo } = req.body;
-  const todu = new Todu({name:todo,link:fodo  });
+  const { todo,fodo,levels,topics,websites  } = req.body;
+  const todu = new Todu({name:todo,link:fodo,level:levels,topic:topics,website:websites  });
   user.todus.push(todu);
   console.log(user);
   todu.user= user;
@@ -17,15 +17,15 @@ router.post('/add/todo/:id', async (req, res) => {
       
       .then(() => {
         console.log("Successfully added todo!");
-        res.redirect("/main");
+        res.redirect("/problem");
       })
   
 })
 // routes
 router
   .post("/add/todo", (req, res) => {
-    const { todo,fodo } = req.body;
-    const newTodu = new Todu({ name:todo,link:fodo });
+    const { todo,fodo,levels,topics,websites } = req.body;
+    const newTodu = new Todu({ name:todo,link:fodo,level:levels,topic:topics,website:websites });
 
     // save the todo
     newTodu

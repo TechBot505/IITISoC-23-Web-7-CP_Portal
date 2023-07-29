@@ -201,12 +201,24 @@ nav{
 
         }
         .logo a{
-            font-size: 40px;
-            padding-top:10px;
-            font-weight: bold;
-            
+        padding-bottom: 10px;
+           font-size: 3rem;
+           font-weight: bold;
+           
+          
+           
 
-        }
+       }
+       @media(max-width:576px){
+        .logo a{
+        padding-top: 20px;
+           font-size: 20px;
+           font-weight: bold;
+          
+           
+
+       }
+       }
         li {
             list-style:none;
         }
@@ -437,7 +449,7 @@ justify-content: center;
               <li><a href="/profile">Contact Us</a></li>
           </ul>
           <div class="mtn">
-          <a href="/logout" class="action-btn">Logout</a>
+          <a href="/users/logout" class="action-btn">Logout</a>
           </div>
           
           
@@ -453,7 +465,7 @@ justify-content: center;
               <li><a href="/problem">Problems</a></li>
               <li><a href="/please/<%=user.id%>">To-do</a></li>
               <li><a href="/profile">Contact Us</a></li>
-              <li><a href="/logout" class="action-btn">Logout</a></li>
+              <li><a href="users/logout" class="action-btn">Logout</a></li>
              
       </div>
     </header>
@@ -542,6 +554,9 @@ justify-content: center;
                       <form action="/add/todo/<%=user.id%>" method="POST">
                         <input type="hidden" value="<%= products.name %> " name="todo">
                         <input type="hidden" value="<%= products.link %> " name="fodo">
+                        <input type="hidden" value="<%= products.topic %> " name="topics">
+                        <input type="hidden" value="<%= products.level %> " name="levels">
+                        <input type="hidden" value="<%= products.website %> " name="websites">
                         <input type="submit" value="Add Todo" class="btn btn-md btn-primary mx-2">
                         
                     </form>
